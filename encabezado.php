@@ -23,7 +23,7 @@
                         <div class="col-md-4" id="Busqueda">
                             <form class="search">
                                 <div class="search__input-container">
-                                    <input type="text" placeholder="Search" class="search__input" />
+                                    <input type="text" placeholder="Search" class="search__input hidden" />
                                 </div>
                                 <button type="button" class="search__button" onclick="toggleBar()">
                                     <i  class="ri-search-2-line"></i>
