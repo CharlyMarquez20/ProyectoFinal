@@ -1,3 +1,11 @@
 *{
     font-family: 'Lato', sans-serif;
 }
+
+a.links{
+    text-decoration: none;
+}
+
+a.links:visited, a.links:link{
+    color: #6f706c;
+}

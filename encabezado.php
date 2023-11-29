@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/encabezado.css">
+    <link rel="stylesheet" href="css/general.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
-    <link rel="shortcut icon" type="image/x-icon" href="images/logo/Logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
     <div class="padreEncabezado">
         <div id="slogan">
-            <h6 style="font-weight: bold;">Encuentra tu paraíso en cada paso: Oasis, donde los tenis son tu escape.</h6>
+            <p style="font-weight: bold;">Encuentra tu paraíso en cada paso: Oasis, donde los tenis son tu escape.</p>
         </div>
 
         <div id="navbar">
@@ -23,10 +23,30 @@
                             <h1>P</h1>
                         </div>
                         <div class="col-md-4" id="Logo">
-                            <img src="images/logo/Logo2.png" alt="" height="70px">
+                            <a href="index.php"><img src="images/logo/Logo2.png" alt="" height="60px"></a>
                         </div>
                         <div class="col-md-4" id="Carrito">
                             <h1>C</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row" id="inferior">
+                        <div id="inferiorDentro">
+                            <div class="col-md-3">
+                                <h6><a href="#" style="text-decoration: none; color: #6f706c;">Filtrar</a></h6>
+                            </div>
+                            <div class="col-md-3">
+                                <h6><a href="#" style="text-decoration: none; color: #6f706c;">Catálogo</a></h6>
+                            </div>
+                            <div class="col-md-3">
+                                <h6><a href="#" style="text-decoration: none; color: #6f706c;">Contacto</a></h6>
+                            </div>
+                            <div class="col-md-3">
+                                <h6><a href="#" style="text-decoration: none; color: #6f706c;">Preguntas frecuentes</a></h6>
+                            </div> 
                         </div>
                     </div>
                 </div>
