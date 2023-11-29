@@ -42,54 +42,59 @@
                             <div class="modal fade" id="Login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button onclick="showLogin()" class="btn btn-primary" id="opcion">Iniciar Sesion</button>
-                                        <button onclick="showRegister()" class="btn btn-primary">Registrarse</button>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="form hidden" id="login">
-                                            <form action="" method="post">
-                                                <h2>Inicio de Sesion</h2>
-                                                <label for="email" name="correo">Email:</label>
-                                                <input type="email" required>
-                                                <br>
-                                                <label for="password" name="contra">Contrasena:</label>  
-                                                <input type="password" required>
-                                                <br>
-                                            </form>
+                                        <div class="modal-header">
+                                            <button onclick="showLogin()" class="btn btn-primary" id="opcion">Iniciar Sesion</button>
+                                            <button onclick="showRegister()" class="btn btn-primary">Registrarse</button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <div class="form hidden" id="register">
-                                            <div>
-                                                <h2>Registrarse</h2>      
-                                                <form action="" method="post" onsubmit="return validarContraseña()">
-                                                    <div class="col-12">
-                                                        <label for="nombre">Nombre:</label>
-                                                        <input type="text" id="nombre" name="nombre" required>
+                                        <div class="modal-body">
+                                            <div class="form hidden" id="login">
+                                                <form action="leerDatos.php" method="post">
+                                                    <h2>Inicio de Sesion</h2>
+                                                    <label for="email" name="correo">Email:</label>
+                                                    <input type="email" required>
 
-                                                        <label for="cuenta">Cuenta:</label>
-                                                        <input type="text" id="cuenta" name="cuenta" required>
+                                                    <br>
 
-                                                        <label for="correo">Correo:</label>  
-                                                        <input type="email" id="correo" name="correo" required>
+                                                    <label for="password" name="contra">Contraseña:</label>  
+                                                    <input type="password" required>
 
-                                                        <label for="comida">Comida favorita:</label>
-                                                        <input type="text" id="comida" name="pregunta" required>
-
-                                                        <label for="contraseña">Contraseña:</label>
-                                                        <input type="password" id="contrasena" required> 
-
-                                                        <label for="repetirContraseña">Repetir contraseña:</label>
-                                                        <input type="password" id="repetirContrasena" required>
-
-                                                    </div>
+                                                    <input type="hidden" name="tipo" value="inicioSesion">
+                                                    <br>
+                                                    <button type="submit" class="btn btn-success">Enviar</button>
                                                 </form>
                                             </div>
+                                            <div class="form hidden" id="register">
+                                                <div>
+                                                    <h2>Registrarse</h2>      
+                                                    <form action="leerDatos.php" method="post" onsubmit="return validarContraseña()">
+                                                        <div class="col-12">
+                                                            <label for="nombre">Nombre:</label>
+                                                            <input type="text" id="nombre" name="nombre" required>
+
+                                                            <label for="cuenta">Cuenta:</label>
+                                                            <input type="text" id="cuenta" name="cuenta" required>
+
+                                                            <label for="correo">Correo:</label>  
+                                                            <input type="email" id="correo" name="correo" required>
+
+                                                            <label for="comida">Comida favorita:</label>
+                                                            <input type="text" id="comida" name="pregunta" required>
+
+                                                            <label for="contraseña">Contraseña:</label>
+                                                            <input type="password" id="contrasena" required> 
+
+                                                            <label for="repetirContraseña">Repetir contraseña:</label>
+                                                            <input type="password" id="repetirContrasena" required>
+                                                            
+                                                            <input type="hidden" name="tipo" value="registro">
+                                                        </div>
+                                                        <br>
+                                                        <button type="submit" class="btn btn-success">Enviar</button>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-success">Enviar</button>
-                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -140,10 +145,12 @@
 
             if (contrasena !== repetirContrasena) {
                 // alert("Las contraseñas no coinciden. Por favor, inténtalo de nuevo.");
-                swal("Error!", "Las contraseñas no coinciden, favor de volver a intentarlo!!", "error");
+                swal("¡Error!", "¡¡Las contraseñas no coinciden, favor de volver a intentarlo!!", "error");
                 return false;
+            }else{
+                swal("¡Correcto!", "Registro exitoso", "success");
+                return true;
             }
-            return true;
         }
     </script>
 
