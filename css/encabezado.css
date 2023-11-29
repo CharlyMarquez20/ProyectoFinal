@@ -26,6 +26,56 @@ div#superior{
 div#Busqueda{
     display: flex;
     justify-content: flex-end;
+    .search {
+        display: inline-flex;
+        align-items: center;
+        background-image: linear-gradient(45deg, #ecfaf9, #e0e7e6);
+        color: #000000;      
+        padding: 10px;
+        border-radius: 4px;
+    }
+    .search:hover{
+        box-shadow: 0 0 10px rgb(83, 119, 116);
+    }
+    .search :is(input, button) {
+    background: transparent;
+    color: inherit;
+    border: none;    
+    outline: none;
+    }
+    .search__input {
+    width: 200px;
+    transition: width 0.5s;
+    }
+    .search__input.hidden {
+    width: 0;
+    padding: 0;
+    border: none;
+    margin: 0;
+    overflow: hidden;
+    }
+    .search__button {
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: color 0.25s;
+    }
+    .search__button:hover {
+    color: #ffffff;
+    }
+    .search__input-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    }
+    ::placeholder {
+    font: inherit;
+    color: #141414;
+    letter-spacing: 3px;
+    font-family:'Times New Roman', Times, serif;
+    }
 }
 
 div#Logo{
