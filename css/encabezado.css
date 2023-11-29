@@ -3,20 +3,24 @@ div.padreEncabezado{
 }
 
 div#slogan{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background-color: black;
     text-align: center;
     color: white;
     padding: 5px;
+    height: 40px;
 }
 
 div#navbar{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     background-color: #f2ede7;
 }
 
 div#superior{
-    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid green; */
+    height: 90px;
 }
 
 div#Busqueda{
@@ -34,3 +38,18 @@ div#Carrito{
     justify-content: flex-start;
 }
 
+div#inferior{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(231, 3, 182); */
+    height: 60px;
+}
+
+div#inferiorDentro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(3, 231, 106); */
+    width: 600px;
+}
