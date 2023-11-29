@@ -8,8 +8,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/cdb62e902e.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 <body>
     <div class="padreEncabezado">
@@ -35,9 +35,65 @@
                             <a href="index.php"><img src="images/logo/Logo2.png" alt="" height="60px"></a>
                         </div>
                         <div class="col-md-4" id="Carrito">
-                            <button id="usuario" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button id="usuario" data-bs-toggle="modal" data-bs-target="#Login">
                                 <img src="images/encabezado/user.png" alt="">
                             </button>
+
+                            <div class="modal fade" id="Login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button onclick="showLogin()" class="btn btn-primary" id="opcion">Iniciar Sesion</button>
+                                        <button onclick="showRegister()" class="btn btn-primary">Registrarse</button>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form hidden" id="login">
+                                            <form action="" method="post">
+                                                <h2>Inicio de Sesion</h2>
+                                                <label for="email" name="correo">Email:</label>
+                                                <input type="email" required>
+                                                <br>
+                                                <label for="password" name="contra">Contrasena:</label>  
+                                                <input type="password" required>
+                                                <br>
+                                            </form>
+                                        </div>
+                                        <div class="form hidden" id="register">
+                                            <div>
+                                                <h2>Registrarse</h2>      
+                                                <form action="" method="post" onsubmit="return validarContraseña()">
+                                                    <div class="col-12">
+                                                        <label for="nombre">Nombre:</label>
+                                                        <input type="text" id="nombre" name="nombre" required>
+
+                                                        <label for="cuenta">Cuenta:</label>
+                                                        <input type="text" id="cuenta" name="cuenta" required>
+
+                                                        <label for="correo">Correo:</label>  
+                                                        <input type="email" id="correo" name="correo" required>
+
+                                                        <label for="comida">Comida favorita:</label>
+                                                        <input type="text" id="comida" name="pregunta" required>
+
+                                                        <label for="contraseña">Contraseña:</label>
+                                                        <input type="password" id="contrasena" required> 
+
+                                                        <label for="repetirContraseña">Repetir contraseña:</label>
+                                                        <input type="password" id="repetirContrasena" required>
+
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-success">Enviar</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
 
                         </div>
                     </div>
@@ -66,6 +122,30 @@
         </div>
     </div>
 
+    <script>
+        function showLogin() {
+        document.getElementById("login").classList.remove("hidden");
+        document.getElementById("register").classList.add("hidden");
+        }
+
+        function showRegister() {
+        document.getElementById("register").classList.remove("hidden"); 
+        document.getElementById("login").classList.add("hidden");
+        }
+    </script>
+    <script>
+        function validarContraseña() {
+            var contrasena = document.getElementById("contrasena").value;
+            var repetirContrasena = document.getElementById("repetirContrasena").value;
+
+            if (contrasena !== repetirContrasena) {
+                // alert("Las contraseñas no coinciden. Por favor, inténtalo de nuevo.");
+                swal("Error!", "Las contraseñas no coinciden, favor de volver a intentarlo!!", "error");
+                return false;
+            }
+            return true;
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
