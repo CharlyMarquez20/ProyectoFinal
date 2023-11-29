@@ -1,0 +1,36 @@
+div.padreEncabezado{
+    margin: 0 auto;
+}
+
+div#slogan{
+    border: 1px solid red;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+
+div#navbar{
+    border: 1px solid blue;
+    background-color: #f2ede7;
+}
+
+div#superior{
+    border: 1px solid green;
+}
+
+div#Busqueda{
+    display: flex;
+    justify-content: flex-end;
+}
+
+div#Logo{
+    display: flex;
+    justify-content: center;
+}
+
+div#Carrito{
+    display: flex;
+    justify-content: flex-start;
+}
+
