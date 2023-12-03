@@ -16,7 +16,7 @@
             include("encabezado.php");
         ?>
     </header>
-
+    
 
     <section>
 

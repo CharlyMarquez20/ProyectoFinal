@@ -1,3 +1,10 @@
+<?php
+    if(!empty($_SESSION['sesion_abierta'])){
+        //echo "Encabezado: ".$_SESSION['sesion_abierta'];
+    }else{
+        session_start();
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,7 +15,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 <body>
@@ -21,8 +28,9 @@
             <div>
                 <div class="col-lg-12">
                     <div id="superior">
+
                         <div class="col-md-4" id="Busqueda">
-                            <form class="search" action="" method="post">
+                            <form class="search" action="#" method="post">
                                 <div class="search__input-container">
                                     <input type="text" placeholder="Search" name="buscar" class="search__input hidden" required>
                                 </div>
@@ -31,14 +39,53 @@
                                 </button>
                             </form>
                         </div>
+
+
                         <div class="col-md-4" id="Logo">
                             <a href="index.php"><img src="images/logo/Logo2.png" alt="" height="60px"></a>
                         </div>
-                        <div class="col-md-4" id="Carrito">
-                            <button id="usuario" data-bs-toggle="modal" data-bs-target="#Login">
-                                <img src="images/encabezado/user.png" alt="">
-                            </button>
 
+
+                        <div class="col-md-4" id="Carrito">
+                            <?php
+                                if(empty($_SESSION['sesion_abierta'])){
+                            ?>
+                                <button id="usuario" data-bs-toggle="modal" data-bs-target="#Login">
+                                    <img src="images/encabezado/user.png" alt="">
+                                </button>
+                            <?php
+                                }elseif(!empty($_SESSION['sesion_abierta'])){
+                            ?>
+                                <button id="usuario" data-bs-toggle="modal" data-bs-target="">
+                                    <img src="images/encabezado/carrito.png" alt="">
+                                </button>
+                                <?php
+                                    if(!empty($_SESSION['admin'])){
+                                        ?>
+                                        <div class="alert alert-light" role="alert" id="nombreUsuario">
+                                            <i style="font-weight: bold;">ADMINISTRADOR</i>
+                                        </div>
+                                        <form action="#" method="post">
+                                            <button type="submit" name="admin" class="btn btn-outline-warning" id="cerrarSesion">Administrar</button> 
+                                        </form>
+                                        <form action="logout.php" method="post">
+                                            <button type="submit" name="cerrarSesion" class="btn btn-outline-danger" id="cerrarSesion2">Cerrar Sesion</button> 
+                                        </form>
+                                        <?php
+                                    }else{
+                                        ?>
+                                        <div class="alert alert-light" role="alert" id="nombreUsuario">
+                                            <i style="font-weight: bold;">Hola, <?php echo $_SESSION['cuenta']; ?></i>
+                                        </div>
+                                        <form action="logout.php" method="post">
+                                            <button type="submit" name="cerrarSesion" class="btn btn-outline-danger" id="cerrarSesion">Cerrar Sesion</button> 
+                                        </form>
+                                        <?php
+                                    }
+                                }
+                            ?>
+
+                            <!-- --------------------INICIO DE MODAL DE INICIO DE SESION O REGISTROS-------------------- -->
                             <div class="modal fade" id="Login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -49,58 +96,34 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="form hidden" id="login">
-                                                <form action="leerDatos.php" method="post">
-                                                    <h2>Inicio de Sesion</h2>
-                                                    <label for="email" name="correo">Email:</label>
-                                                    <input type="email" required>
-
-                                                    <br>
-
-                                                    <label for="password" name="contra">Contraseña:</label>  
-                                                    <input type="password" required>
-
-                                                    <input type="hidden" name="tipo" value="inicioSesion">
-                                                    <br>
-                                                    <button type="submit" class="btn btn-success">Enviar</button>
-                                                </form>
+                                                <h2>Inicio de Sesion</h2>
+                                                <?php
+                                                    include("formularios/loginForm.php");
+                                                ?>
+                                                <br>
+                                                <button onclick="showCambiar()" class="btn btn-warning">Recuperar contraseña</button>
                                             </div>
                                             <div class="form hidden" id="register">
                                                 <div>
                                                     <h2>Registrarse</h2>      
-                                                    <form action="leerDatos.php" method="post" onsubmit="return validarContraseña()">
-                                                        <div class="col-12">
-                                                            <label for="nombre">Nombre:</label>
-                                                            <input type="text" id="nombre" name="nombre" required>
-
-                                                            <label for="cuenta">Cuenta:</label>
-                                                            <input type="text" id="cuenta" name="cuenta" required>
-
-                                                            <label for="correo">Correo:</label>  
-                                                            <input type="email" id="correo" name="correo" required>
-
-                                                            <label for="comida">Comida favorita:</label>
-                                                            <input type="text" id="comida" name="pregunta" required>
-
-                                                            <label for="contraseña">Contraseña:</label>
-                                                            <input type="password" id="contrasena" required> 
-
-                                                            <label for="repetirContraseña">Repetir contraseña:</label>
-                                                            <input type="password" id="repetirContrasena" required>
-                                                            
-                                                            <input type="hidden" name="tipo" value="registro">
-                                                        </div>
-                                                        <br>
-                                                        <button type="submit" class="btn btn-success">Enviar</button>
-                                                    </form>
+                                                    <?php
+                                                        include("formularios/registro.html");
+                                                    ?>
                                                 </div>
+                                            </div>
+                                            <div class="form hidden" id="cambiarContra">
+                                                <h2>Cambiar contraseña</h2>
+                                                <?php
+                                                    include("formularios/cambiarContra.php");
+                                                ?>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
+                            <!-- --------------------FIN DE MODAL DE INICIO DE SESION O REGISTROS-------------------- -->
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -131,32 +154,22 @@
         function showLogin() {
         document.getElementById("login").classList.remove("hidden");
         document.getElementById("register").classList.add("hidden");
+        document.getElementById("cambiarContra").classList.add("hidden");
         }
 
         function showRegister() {
         document.getElementById("register").classList.remove("hidden"); 
         document.getElementById("login").classList.add("hidden");
+        document.getElementById("cambiarContra").classList.add("hidden");
+        }
+
+        function showCambiar() {
+        document.getElementById("cambiarContra").classList.remove("hidden"); 
+        document.getElementById("login").classList.add("hidden");
+        document.getElementById("register").classList.add("hidden");
         }
     </script>
-    <script>
-        function validarContraseña() {
-            var contrasena = document.getElementById("contrasena").value;
-            var repetirContrasena = document.getElementById("repetirContrasena").value;
-
-            if (contrasena !== repetirContrasena) {
-                // alert("Las contraseñas no coinciden. Por favor, inténtalo de nuevo.");
-                swal("¡Error!", "¡¡Las contraseñas no coinciden, favor de volver a intentarlo!!", "error");
-                return false;
-            }else{
-                swal("¡Correcto!", "Registro exitoso", "success");
-                return true;
-            }
-        }
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    
     <script>
         function toggleBar() {
             const 
@@ -167,5 +180,10 @@
             toggle("hidden");
         }
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    
 </body>
 </html>
