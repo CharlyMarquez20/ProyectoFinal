@@ -9,3 +9,7 @@ a.links{
 a.links:visited, a.links:link{
     color: #6f706c;
 }
+
+body.fondo{
+    background-color: #dedfd934;
+}

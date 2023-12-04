@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/ayuda.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/Logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/general.css">
     <title>Ayuda</title>
 </head>
-<body >
+<body class="fondo">
 
     <header>
         <?php
@@ -19,7 +20,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
     <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">
               <div class="card-header">
                 PAGOS
               </div>
@@ -33,7 +34,7 @@
         </div>
 
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">
               <div class="card-header">
               ENVIOS
               </div>
@@ -47,7 +48,7 @@
         </div>
 
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">
               <div class="card-header">
               ENVIOS
               </div>
@@ -61,7 +62,7 @@
         </div>
 
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">
               <div class="card-header">
               ENTREGA
               </div>
@@ -75,7 +76,7 @@
         </div>
 
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">
               <div class="card-header">
               ENTREGA
               </div>
@@ -89,7 +90,7 @@
         </div>
 
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">
               <div class="card-header">
               ENTREGA
               </div>
@@ -103,7 +104,7 @@
         </div>
 
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">
               <div class="card-header">
               DEVOLUCIONES
               </div>
@@ -117,7 +118,7 @@
         </div>
 
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">
               <div class="card-header">
               PAGOS
               </div>
@@ -131,21 +132,21 @@
         </div>
 
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">
               <div class="card-header">
               NOVEDADES
               </div>
               <div class="card-body" >
               <blockquote class="blockquote mb-0">
                 <p>¿Cómo puedo enterarme de las ultimas novedades?</p>
-                <footer class="blockquote-footer">Visita nuestros sitios oficiales Oasis.com y enterate de cualqueir noticia</footer>
+                <footer class="blockquote-footer">Visita nuestros sitios oficiales Oasis.com y enterate de cualquier noticia</footer>
               </blockquote>
             </div>
             </div>
         </div>
 
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">
               <div class="card-header">
               PEDIDOS
               </div>
@@ -159,13 +160,13 @@
         </div>
 
           <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">
               <div class="card-header">
               DEVOLUCIONES
               </div>
               <div class="card-body" >
               <blockquote class="blockquote mb-0">
-                <p>Reenbolso</p>
+                <p>Reembolso</p>
                 <footer class="blockquote-footer">Después de recibir una devolución, normalmente nos lleva cuatro días hábiles procesarla y emitir un reembolso. Te enviaremos un correo electrónico con la fecha de inicio del reembolso, pero los fondos podrían tardar hasta 10 días hábiles más en reflejarse en tu cuenta.
                 El reembolso incluye el valor total de cualquier producto devuelto. Ten en cuenta que los costos de envío no son reembolsables a menos que recibas un producto incorrecto. </footer>
               </blockquote>
@@ -174,12 +175,16 @@
         </div>
 
         <div class="col">
-            <div class="card h-100">
+            <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">
+              <div class="card-header">
+                ¿MÁS PREGUNTAS?
+              </div>
               <div class="card-body" >
-              <h5 class="card-title">¿Más preguntas?</h5>
-            <p class="card-text">Contactate con nosotros</p>
-            <a href="contactanos.php" class="btn btn-primary">CONTACTO</a>
-            </div>
+                <blockquote class="blockquote mb-0">
+                <p class="card-text">Contáctate con nosotros</p>
+                <a href="contactanos.php" class="btn btn-outline-primary">CONTACTO</a>
+                </blockquote>
+              </div>
             </div>
         </div>
         

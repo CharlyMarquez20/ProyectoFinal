@@ -43,6 +43,7 @@ crear el disenio del flex */
 .img_contenedor{
     overflow: hidden;
     position: relative;
+    box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);
 }
   
 .overlay {

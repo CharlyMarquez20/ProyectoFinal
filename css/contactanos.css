@@ -1,4 +1,3 @@
-
 .form1 {
     display: flex;
     flex-direction: column;
@@ -16,6 +15,7 @@
     border-radius: 8px;
     max-width: 500px; /* Ajusta según sea necesario */
     width: 100%;
+    box-shadow: 0 5px 10px gray;
 }
 
 .dentro {
@@ -23,6 +23,6 @@
     width: 100%;
 }
 
-form {
+form#correo{
     width: 100%;
 }
