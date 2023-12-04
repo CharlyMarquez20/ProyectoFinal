@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +41,7 @@
                         <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"></textarea>
                     </div>
-                    <button type="button" class="btn btn-secondary">Enviar</button>
+                    <button type="submit" name="submit" class="btn btn-secondary">Enviar</button>
                 </form>
             </div>
         </div>

@@ -19,7 +19,34 @@
     
 
     <section>
-
+        <?php
+            if($_SERVER["REQUEST_METHOD"] == 'GET'){
+                if(isset($_GET['tipo'])){
+                    $tipo=$_GET['tipo'];
+                    if($tipo=="mandarCorreo"){
+                        ?>
+                            <script>
+                                Swal.fire({
+                                icon: "success",
+                                title: "¡Genial!",
+                                text: "Tu correo ha sido enviado. Entra a tu bandeja para más detalles."
+                                });
+                            </script>
+                        <?php
+                    }elseif($tipo=="error"){
+                        ?>
+                            <script>
+                                Swal.fire({
+                                icon: "error",
+                                title: "¡Ups!",
+                                text: "Tu correo no ha podido ser enviado ):"
+                                });
+                            </script>
+                        <?php
+                    }
+                }
+            }
+        ?>
     </section>
 
 
