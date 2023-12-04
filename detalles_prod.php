@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/catalogo.css">
     <title>Detalles</title>
 </head>
-<body>
+<body class="fondo">
     <?php
         include "encabezado.php";
     ?>

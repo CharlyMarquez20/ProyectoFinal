@@ -108,13 +108,14 @@
 
     <title>Catalogo</title>
 </head>
-<body>
+<body class="fondo">
     <?php
     require "encabezado.php";
     ?>
     
     <!-- aside -->
     <div class="filtro-container">
+        <br>
         <div class="h2-aside" >
             <h2>Productos</h2> 
         </div>
