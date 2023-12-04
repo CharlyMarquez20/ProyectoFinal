@@ -79,7 +79,7 @@
             ?>
             <h4>Descripción</h4>
             <p><?php echo $descripcion ?></p>
-            <form action="" method="post">
+            <form action="#" method="post">
                 <label for="talla">Talla</label>
                 <div class="talla-container">
                     <label class="talla-option" for="talla_23">
@@ -108,11 +108,30 @@
                 <h6 id="estilo">Casual</h6>
 
                 <h6>Existencia:</h6>
-                <h6 class="talla-option"><?php echo $existencia ?></h6>
+                <h6 class="talla-option">
+                    <?php
+                        if($existencia==0){
+                           echo "Producto agotado";
+                        }else{
+                           echo $existencia;
+                        }
+                     ?>
+                </h6>
 
                 <h6>Cantidad</h6>
-                <input type="number" value="1" id="cantidad" min="1" max="<?php echo $existencia ?>">
-                <button id="carrito-btn" >Añadir al carrito</button>
+                <?php
+                    if($existencia==0){
+                        ?>
+                        <input type="number" value="0" id="cantidad" min="0" max="<?php echo $existencia ?>" disabled>
+                        <button type="submit" id="carrito-btn" disabled>Añadir al carrito</button>
+                        <?php
+                    }else{
+                        ?>
+                        <input type="number" value="1" id="cantidad" min="1" max="<?php echo $existencia ?>">
+                        <button type="submit" id="carrito-btn" disabled>Añadir al carrito</button>
+                        <?php
+                    }
+                ?>
             </form>
         </div>
 
