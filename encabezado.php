@@ -132,7 +132,7 @@
                     <div id="inferior">
                         <div id="inferiorDentro">
                             <div class="col-md-3">
-                                <h6><a href="#" style="text-decoration: none; color: #6f706c;">Inicio</a></h6>
+                                <h6><a href="index.php" style="text-decoration: none; color: #6f706c;">Inicio</a></h6>
                             </div>
                             <div class="col-md-3">
                                 <h6><a href="catalogo.php" style="text-decoration: none; color: #6f706c;">Catálogo</a></h6>
