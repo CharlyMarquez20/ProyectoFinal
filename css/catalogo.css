@@ -1,3 +1,4 @@
+
 /* 
 crear el disenio del flex */
 .img_tenis{
@@ -11,7 +12,6 @@ crear el disenio del flex */
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    padding: 150px;
 }
 .producto {
     margin: 15px;
@@ -78,14 +78,155 @@ crear el disenio del flex */
     color: white;
 }
 
-/* ordenar por categoria */
-#productos-container[data-categoria="hombre"] .producto[data-categoria="hombre"],
-#productos-container[data-categoria="mujer"] .producto[data-categoria="mujer"] {
+
+/*estilos para el aside*/
+aside{
+    float: left;
+    width: 300px;
+    background-color: #f2ede7;
+    border: solid 1px var(--gray-color);
+    box-shadow: 2px 2px 5px var(--gray-color);
+    margin-left: 90px;
+    margin-top: 12px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+aside h6{
+    text-transform: uppercase;
+    margin-top: 55px;
+    border-bottom: solid 1px grey;
+
+}
+.h2-aside{
+    margin-left: 100px;
+    border-bottom: solid 1px grey;
+    width: 290px;
+}
+#filtrar-btn{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 5px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    margin:50px auto 0;
+    text-align: center;
+}
+#filtrar-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/*input*/
+.rango-precio input {
+    width: 80px; 
+    margin-right: 5px; 
+}
+
+/*dropdown*/
+.ordenar-por {
+    padding-right:140px ;
+    background-color: none;
+    margin-top: 40px;
+    
+}
+
+
+
+/*detalles productos*/
+.section-1{
+    padding: 60px;
+}
+/*imagen del producto*/
+#detalles-producto .img-producto{
+    width: 40%;
+    margin: 50px;
+}
+
+.grupo-img{
+    display: flex;
+    justify-content: space-between;
+}
+.img-peque-col{
+    flex-basis: 40%;
+    cursor: pointer;
+    
+}
+
+/*descripcion producto*/
+
+#detalles-producto {
+    display: flex;
+    margin-top: 10px;
+}
+#detalles-producto .descripcion-producto{
+    width: 50%;
+    padding-top: 50px;
+}
+#detalles-producto .descripcion-producto h4{
+    padding: 40px 0 20px 0;
+}
+#detalles-producto .descripcion-producto h2{
+    font-size: 26px;
+}
+#detalles-producto .descripcion-producto #cantidad{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+#carrito-btn{
+    background: black;
+    color: #f2ede7;
+    border: none;
+    padding: 15px;
+}
+#carrito-btn:hover{
+    background: floralwhite;
+    color: black;
+    border:solid 1px black;
+}
+/*botones de talla*/
+.talla-option {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+label{
+    display: block;
+    margin-bottom: 8px;
+}
+#cantidad{
+    width: 50px;
+    text-align: center;
+}
+.talla-container{
+    display: flex;
+}
+.talla-option input {
     display: none;
 }
 
-#productos-container[data-categoria="hombre"] .producto[data-categoria="mujer"],
-#productos-container[data-categoria="mujer"] .producto[data-categoria="hombre"],
-#productos-container[data-categoria="todos"] .producto {
-    display: none;
+.talla-option.selected {
+    background-color: black;
+    color: white;
+}
+
+/*color*/
+#estilo {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    background-color: black;
+    color: white;
+    font-size: 16px;
 }
