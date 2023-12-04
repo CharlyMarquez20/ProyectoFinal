@@ -112,19 +112,7 @@
     <?php
     require "encabezado.php";
     ?>
-    <!-- dropdown -->
-    <div class="ordenar-por">
-        <div class="dropdown text-end">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Ordenar por:
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Destacado</a></li>
-                <li><a class="dropdown-item" href="#">Precio: alto-bajo</a></li>
-                <li><a class="dropdown-item" href="#">Precio: bajo-alto</a></li>
-            </ul>
-        </div>
-    </div>
+    
     <!-- aside -->
     <div class="filtro-container">
         <div class="h2-aside" >
