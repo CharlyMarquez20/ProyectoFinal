@@ -26,7 +26,7 @@
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
         //Recipients
-        $mail->setFrom('mqzcarlos3@gmail.com', 'CHARLY GROUP');
+        $mail->setFrom('mqzcarlos3@gmail.com', 'OASIS GROUP');
         $mail->addAddress($correo, $nombre);     //Add a recipient
     
         //Content
@@ -40,9 +40,10 @@
     
         $mail->send();
         
-        echo "TU MENSAJE HA SIDO ENVIADO";
+        echo "<script>window.location.href = 'index.php?tipo=mandarCorreo';</script>";
     } catch (Exception $e) {
-        echo "El mensaje no ha podido ser enviado. Intentalo de nuevo {$mail->ErrorInfo}";
+        echo "<script>window.location.href = 'index.php?tipo=error';</script>";
+        //echo "El mensaje no ha podido ser enviado. Intentalo de nuevo {$mail->ErrorInfo}";
     }
 
 ?>
