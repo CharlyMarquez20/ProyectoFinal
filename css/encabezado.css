@@ -152,6 +152,17 @@ button#cerrarSesion2{
     top: 20px;
 }
 
+span#contadorCarrito{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 4px;
+    border-radius: 25px;
+    position: relative;
+    right: 5px;
+    bottom: 18px;
+    font-size: 12px;
+}
+
 /* --------------------------------USUARIO/CARRITO-------------------------------- */
 
 div#inferior{

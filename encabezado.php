@@ -58,6 +58,9 @@
                             ?>
                                 <button id="usuario" data-bs-toggle="modal" data-bs-target="">
                                     <img src="images/encabezado/carrito.png" alt="">
+                                    <span id="contadorCarrito">
+                                        <span class="numero"> 0 </span>
+                                    </span>
                                 </button>
                                 <?php
                                     if(!empty($_SESSION['admin'])){
