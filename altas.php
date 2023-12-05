@@ -19,6 +19,7 @@
         $precio = $_POST['precio'];
         $descuento = $_POST['descuento'];
     }
+    
     $contador=1;
     $sql="SELECT Imagen1 FROM productos WHERE Categoria='$categoria'";
     $resultado=$conexion->query($sql);
@@ -27,6 +28,7 @@
             $contador++;
         }
     }
+
     if ($_SERVER["REQUEST_METHOD"] == "POST" && 
             isset($_FILES["imagen1"]) && isset($_FILES["imagen2"]) && isset($_FILES["imagen3"]) && isset($_FILES["imagen4"]) 
             && !(empty($_FILES["imagen1"]["tmp_name"])) && !(empty($_FILES["imagen2"]["tmp_name"])) && !(empty($_FILES["imagen3"]["tmp_name"]))

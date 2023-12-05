@@ -21,6 +21,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <title>Administrador</title>
 </head>
 <body class="fondo">
@@ -51,6 +53,26 @@
                                 icon: "success",
                                 title: "¡Genial!",
                                 text: "El producto ha sido dado de baja correctamente"
+                                });
+                            </script>
+                        <?php
+                    }elseif($tipo=="bajasMal"){
+                        ?>
+                            <script>
+                                Swal.fire({
+                                icon: "error",
+                                title: "¡Ups!",
+                                text: "El producto seleccionado no existe"
+                                });
+                            </script>
+                        <?php
+                    }elseif($tipo=="cambios"){
+                        ?>
+                            <script>
+                                Swal.fire({
+                                icon: "success",
+                                title: "¡Genial!",
+                                text: "El producto ha sido actualizado"
                                 });
                             </script>
                         <?php
@@ -251,24 +273,122 @@
         
         <div id="content4" style="display: none;">
             <br>
-            <h2>Cambios</h2>
-            <table>
-                <tr>
-                    <th>Id</th>
-                    <th>Marca</th>
-                    <th>Nombre</th>
-                    <th>Categoría</th> 
-                    <th>Encabezado</th>
-                    <th>Descripción</th>
-                    <th>Existencia</th>
-                    <th>Precio</th>
-                    <th>Imagen1</th>
-                    <th>Imagen2</th>  
-                    <th>Imagen3</th>
-                    <th>Imagen4</th>
-                    <th>Descuento</th>
-                </tr>
-            </table>
+            <form action="admin.php" method="post">
+                <label for="id_producto_buscar">ID del Producto a Modificar:</label>
+                <input type="number" name="id_producto_buscar">
+                <button type="submit" name="buscar" class="btn btn-dark">Buscar Producto</button>
+            </form>
+            <?php
+                if (isset($_POST['buscar'])) {
+                // Obtener el ID del producto a buscar
+                $id_producto_buscar = $_POST['id_producto_buscar'];
+
+                // Verificar si el ID existe en la base de datos
+                $sql_buscar = "SELECT * FROM productos WHERE id = $id_producto_buscar";
+                $resultado_buscar = $conexion->query($sql_buscar);
+
+                    if ($resultado_buscar->num_rows > 0) {
+                        $fila_producto = $resultado_buscar->fetch_assoc();
+
+                        // Mostrar los campos actuales para su modificación
+                        ?>
+                        <br>
+                        <form action="modificar_productos.php" method="post" enctype="multipart/form-data">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h4>Datos del producto con ID: </h4>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" name="id_producto" value="<?php echo $fila_producto['Id']; ?>" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label id="Encabezados">Marca</label>
+                                        <input type="text" name="marca" value="<?php echo $fila_producto['Marca']; ?>">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label id="Encabezados">Nombre</label>
+                                        <input type="text" name="nombre" value="<?php echo $fila_producto['Nombre']; ?>">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label id="Encabezados">Encabezado</label>
+                                        <input type="text" name="encabezado" value="<?php echo $fila_producto['Encabezado']; ?>">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label id="Encabezados">Descripcion</label>
+                                        <textarea name="descripcion"><?php echo $fila_producto['Descripcion']; ?></textarea>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label id="Encabezados">Categoria</label>
+                                        <input type="text" name="categoria" value="<?php echo $fila_producto['Categoria']; ?>">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label id="Encabezados">Existencia</label>
+                                        <input type="number" name="existencia" value="<?php echo $fila_producto['Existencia']; ?>">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label id="Encabezados">Precio</label>
+                                        <input type="number" name="precio" value="<?php echo $fila_producto['Precio']; ?>">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label id="Encabezados">Descuento</label>
+                                        <input type="number" name="descuento" value="<?php echo $fila_producto['Descuento']; ?>">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label id="Encabezados">Imagen 1</label>
+                                        <input type="file" name="imagen1" id="imagen1" accept="image/*">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label id="Encabezados">Imagen 2</label>
+                                        <input type="file" name="imagen2" id="imagen2" accept="image/*">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label id="Encabezados">Imagen 3</label>
+                                        <input type="file" name="imagen3" id="imagen3" accept="image/*">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label id="Encabezados">Imagen 4</label>
+                                        <input type="file" name="imagen4" id="imagen4" accept="image/*">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" name="modificar" class="btn btn-dark">Guardar Cambios</button>
+                        </form>
+
+                        <?php
+                    }else{
+                        ?>
+                            <script>
+                                Swal.fire({
+                                icon: "error",
+                                title: "¡Ups!",
+                                text: "El producto seleccionado no existe"
+                                });
+                            </script>
+                        <?php
+                    }
+                }
+            ?>
         </div>
 
 
