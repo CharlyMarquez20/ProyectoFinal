@@ -13,12 +13,21 @@ if (isset($_POST['eliminar'])) {
     // Obtener el ID del producto a dar de baja
     $id_producto = $_POST['id_producto'];
     
-    // Eliminar el producto de la base de datos
-    $sql_eliminar = "DELETE FROM productos WHERE Id = '$id_producto'";
-    $resultado_eliminar = $conexion->query($sql_eliminar);
+    $sql = "SELECT Id FROM productos WHERE Id='$id_producto'";
+    $resultado = $conexion->query($sql);
 
-    if ($resultado_eliminar) {
-        echo "<script>window.location.href = 'admin.php?tipo=bajas';</script>";
+    if ($resultado -> num_rows){
+       // Eliminar el producto de la base de datos
+        $sql_eliminar = "DELETE FROM productos WHERE Id = '$id_producto'";
+        $resultado_eliminar = $conexion->query($sql_eliminar);
+
+        if ($resultado_eliminar) {
+            echo "<script>window.location.href = 'admin.php?tipo=bajas';</script>";
+        } 
+    }else{
+        echo "<script>window.location.href = 'admin.php?tipo=bajasMal';</script>";
     }
+
+    
 }
 ?>
