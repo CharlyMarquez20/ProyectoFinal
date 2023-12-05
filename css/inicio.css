@@ -100,15 +100,11 @@
     padding: 40px;
     display: grid;
     justify-items: center;
-    
 }
 
 .section6 h2{
-    position: relative;
-    left: 140px;
-    justify-self: start;
+    justify-self: center;
     grid-row: 1 / 2;
-    
 }
 
 .section6 iframe{
@@ -118,7 +114,7 @@
 .section7{
     background-color: rgb(24, 22, 20);
     color: white;
-    padding: 40px;
+    padding: 40px 130px;
     display: grid;
     justify-items: center;
     align-items: center;

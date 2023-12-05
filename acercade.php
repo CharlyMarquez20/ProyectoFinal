@@ -5,15 +5,23 @@
     <meta name="viewport" content=" classth=device- classth, initial-scale=1.0">
     <link rel="stylesheet" href="css/acercade.css">
     <link rel="stylesheet" href="css/general.css">
+
     <link rel="shortcut icon" type="image/x-icon" href="images/logo/Logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
 
     <title>Acerca de</title>
 </head>
-<body>
+<body class="fondo">
+    <header>
+        <?php
+        require("encabezado.php");
+        ?>
+    </header>
     <div class="section1">
         <div class="info1">
-            <p>Bienveidos a OASIS, el lugar que te ofrece una experiencia donde cada par cuenta una historia y cada cliente encuentra su paraíso personal en cada paso que da. <br>¡Bienvenidos a nuestro oasis de estilo y confort!</p>
+            <div id="contenidoInfo1">
+                <p>Bienvenidos a OASIS, el lugar que te ofrece una experiencia donde cada par cuenta una historia y cada cliente encuentra su paraíso personal en cada paso que da. <br>¡Bienvenidos a nuestro oasis de estilo y confort!</p>
+            </div>
         </div>
         <div class="img1">
             <img src="images/acercade/img1.jpg" alt="Imagen no encontrada" width="600">

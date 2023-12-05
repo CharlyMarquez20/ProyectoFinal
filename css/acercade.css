@@ -2,16 +2,22 @@
     display: grid;
     grid-auto-flow: row;
     align-content: center;
+    background-color: #e7d3d0;
 }
 
 .section1 .info1{
     color: rgb(49, 46, 46);
-    background-color: #e7d3d0;
-    padding: 90px 150px 90px 150px;
+    padding: 100px 150px 90px 300px;
     font-size: 20px;
     text-align: start;
     grid-column-start: 1;
     grid-column-end: 3;
+    align-self: center;
+    justify-self: center;
+}
+
+div#contenidoInfo1{
+    width: 70%;
 }
 
 .section1 .img1{
@@ -60,6 +66,7 @@
 .section3{
     display: grid;
     grid-auto-flow: row;
+    background-color: #D1CFD0;
 }
 
 .section3 .img2{
@@ -70,9 +77,9 @@
 
 .section3 .info3{
     text-align: justify;
-    background-color: #D1CFD0;
     padding: 100px 100px 60px 100px;
     grid-column-start: 3;
     grid-column-end: 5;
+    align-self: center;
 }
 

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="images/logo/Logo.png">
     <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/general.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>OASIS</title>
 </head>
@@ -37,11 +39,15 @@
     <div class="section2">
         <h2>Destacados</h2>
         <img class="grow" id="img1" src="https://images.unsplash.com/photo-1626379616459-b2ce1d9decbc?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="400">
-        <img class="img2" src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="200">
-        <p id="p1">Producto</p>
-        <img class="img3" src="https://images.unsplash.com/photo-1600185652960-c9d8869d015c?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="200"
-        height="200">
-        <p id="p2">Colección urbana -></p>
+        <a href="catalogo.php">
+            <img class="img2" src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="200">
+        </a>
+        <p id="p1">Productos</p>
+        <a href="catalogo.php">
+            <img class="img3" src="https://images.unsplash.com/photo-1600185652960-c9d8869d015c?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="200"
+            height="200">
+        </a>
+        <p id="p2">Colecciones</p>
     </div>
     <div class="section3">
         <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/enPH/Images/ph-plp-mh-d_tcm184-1034948.jpg" alt="">
@@ -55,10 +61,14 @@
         <img id="img3" src="images/inicio/colecc3.png" alt="" width="200" height="200">
         <p id="col3">Niños (Próximamente)</p>
     </div>
+
     <div class="section6">
-        <h2>OASIS x Adidas x ITZY</h2>
-        <iframe width="900" height="480" src="https://www.youtube.com/embed/549UtQ_jZpE" title="adidas Running l ULTRABOOST 22 l ITZY에게 한계란 없지" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div id="contenido">
+            <h2>OASIS x Adidas x ITZY</h2>
+            <iframe width="900" height="480" src="https://www.youtube.com/embed/549UtQ_jZpE" title="adidas Running l ULTRABOOST 22 l ITZY에게 한계란 없지" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
     </div>
+
     <div class="section7">
         <small>REVIEWS</small>
         <h2>TESTIMONIOS</h2>
