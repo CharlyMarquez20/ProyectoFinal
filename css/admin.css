@@ -1,0 +1,88 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    /* Limitar ancho de celda de Descripción */
+    td.description {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+    /* Estilos generales */
+main {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #f2ede7;
+    padding: 8px;
+  } 
+  
+  tr:nth-child(even) {
+    background-color: #f2ede7;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Estilos de los botones */
+  #btn1, #btn2, #btn3, #btn4 {
+    display: inline-block;
+    padding: 10px 20px; 
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #333;
+    background-color: #f2ede7;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 3px #999;
+    margin: 4px 2px;
+  }
+  
+  #btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover {
+    background-color: #e0dddd;
+  }
+  
+  /* center buttons */
+  .buttons {
+    text-align: center;
+  }
+  
+  /* Otros estilos */
+  label{
+    display: block;
+  }
+  
+  label#Encabezados{
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;  
+  }
+  
+  input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #4d4d4d; 
+  }

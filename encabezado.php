@@ -68,9 +68,7 @@
                                         <div class="alert alert-light" role="alert" id="nombreUsuario">
                                             <i style="font-weight: bold;">ADMINISTRADOR</i>
                                         </div>
-                                        <form action="#" method="post">
-                                            <button type="submit" name="admin" class="btn btn-outline-warning" id="cerrarSesion">Administrar</button> 
-                                        </form>
+                                        <a href="admin.php" class="btn btn-outline-warning" id="cerrarSesion">Administrar</a>
                                         <form action="logout.php" method="post">
                                             <button type="submit" name="cerrarSesion" class="btn btn-outline-danger" id="cerrarSesion2">Cerrar Sesion</button> 
                                         </form>
