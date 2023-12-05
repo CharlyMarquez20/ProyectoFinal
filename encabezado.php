@@ -135,17 +135,18 @@
                     <div id="inferior">
                         <div id="inferiorDentro">
                             <div class="col-md-3">
-                                <h6><a href="index.php" style="text-decoration: none; color: #6f706c;">Inicio</a></h6>
-                            </div>
-                            <div class="col-md-3">
                                 <h6><a href="catalogo.php" style="text-decoration: none; color: #6f706c;">Catálogo</a></h6>
                             </div>
                             <div class="col-md-3">
                                 <h6><a href="contactanos.php" style="text-decoration: none; color: #6f706c;">Contacto</a></h6>
                             </div>
                             <div class="col-md-3">
-                                <h6><a href="ayuda.php" style="text-decoration: none; color: #6f706c;">Preguntas frecuentes</a></h6>
+                                <h6><a href="acercade.php" style="text-decoration: none; color: #6f706c;">Acerca de</a></h6>
                             </div> 
+                            <div class="col-md-3">
+                                <h6><a href="ayuda.php" style="text-decoration: none; color: #6f706c;">Preguntas frecuentes</a></h6>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
