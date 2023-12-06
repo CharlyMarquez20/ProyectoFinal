@@ -42,7 +42,7 @@
             imagesetpixel($warped_image, rand(0,$width), rand(0,$height), $black);
         }
         // Agrega las lineas en el captcha
-        for($i=0; $i<rand(10,20); $i++) {
+        for($i=0; $i<rand(8,15); $i++) {
             imageline($warped_image, rand(0,$width), rand(0,$height), rand(0,$width), rand(0,$height), $black);
         }
         $path = "captcha.jpg";
