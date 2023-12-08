@@ -9,12 +9,25 @@ table, th, td {
     text-overflow: ellipsis;
     white-space: nowrap;
     }
+
+    td.imagen {
+      max-width: 100px;
+      overflow: hidden;
+    }
+
+    td.descuento {
+      text-align: center;
+    }
     /* Estilos generales */
 main {
     width: 100%;
     padding: 20px;
   }
   
+  div#tabla{
+    width: 100%;
+  }
+
   table {
     border-collapse: collapse;
     width: 100%;

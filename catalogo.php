@@ -161,7 +161,7 @@
                     ?>
                     <div class="producto">
                         <div class="img_contenedor">
-                            <img class="img_tenis" src="images/productos/<?php print_r($producto["Imagen1"]); ?>" alt="">
+                            <img class="img_tenis" src="images/productos/<?php print_r($producto["Imagen1"]); ?>" alt="" width="840" height="840">
                             <div class="overlay">
                                 <div class="texto">
                                     <?php print_r($producto["Encabezado"]); ?>

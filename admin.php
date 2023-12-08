@@ -87,50 +87,52 @@
             <button id="btn4">Cambios</button>
         </div>
         
-        <div id="content1" style="display: block;">
+        <div id="content1" style="display: block;" >
             <br>
-            <table>
-                <tr>
-                <th>Id</th>
-                <th>Marca</th>
-                <th>Nombre</th>
-                <th>Categoría</th> 
-                <th>Encabezado</th>
-                <th>Descripción</th>
-                <th>Existencia</th>
-                <th>Precio</th>
-                <th>Imagen1</th>
-                <th>Imagen2</th>  
-                <th>Imagen3</th>
-                <th>Imagen4</th>
-                <th>Descuento</th>
-                </tr>
-                <?php
-                    $sql = "SELECT Id, Marca, Nombre, Categoria, Encabezado, Descripcion, Existencia, Precio, Imagen1, Imagen2, Imagen3, Imagen4, Descuento FROM productos";
-                    $result = mysqli_query($conexion, $sql);
-                    if(mysqli_num_rows($result) > 0){
-                    while($row = mysqli_fetch_assoc($result)){
-                        echo "<tr>";
-                        echo "<td>" . $row["Id"] . "</td>";
-                        echo "<td>" . $row["Marca"] . "</td>";
-                        echo "<td>" . $row["Nombre"] . "</td>"; 
-                        echo "<td>" . $row["Categoria"] . "</td>";
-                        echo "<td>" . $row["Encabezado"] . "</td>";
-                        echo "<td class='description';>" . $row["Descripcion"] . "</td>";
-                        echo "<td>" . $row["Existencia"] . "</td>";
-                        echo "<td>" . $row["Precio"] . "</td>";
-                        echo "<td class='description';>" . $row["Imagen1"] . "</td>";
-                        echo "<td class='description';>" . $row["Imagen2"] . "</td>";
-                        echo "<td class='description';>" . $row["Imagen3"] . "</td>";  
-                        echo "<td class='description';>" . $row["Imagen4"] . "</td>";
-                        echo "<td>" . $row["Descuento"] . "</td>";
-                        echo "</tr>";
-                    }
-                    }else {
-                    echo "<tr><td colspan='13'>No hay datos</td></tr>";
-                    }
-                ?>
-            </table>
+            <div id="tabla">
+                <table>
+                    <tr>
+                    <th>Id</th>
+                    <th>Marca</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th> 
+                    <th>Encabezado</th>
+                    <th>Descripción</th>
+                    <th>Existencia</th>
+                    <th>Precio</th>
+                    <th>Imagen1</th>
+                    <th>Imagen2</th>  
+                    <th>Imagen3</th>
+                    <th>Imagen4</th>
+                    <th>Descuento</th>
+                    </tr>
+                    <?php
+                        $sql = "SELECT Id, Marca, Nombre, Categoria, Encabezado, Descripcion, Existencia, Precio, Imagen1, Imagen2, Imagen3, Imagen4, Descuento FROM productos";
+                        $result = mysqli_query($conexion, $sql);
+                        if(mysqli_num_rows($result) > 0){
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo "<tr>";
+                            echo "<td>" . $row["Id"] . "</td>";
+                            echo "<td>" . $row["Marca"] . "</td>";
+                            echo "<td>" . $row["Nombre"] . "</td>"; 
+                            echo "<td>" . $row["Categoria"] . "</td>";
+                            echo "<td>" . $row["Encabezado"] . "</td>";
+                            echo "<td class='description';>" . $row["Descripcion"] . "</td>";
+                            echo "<td>" . $row["Existencia"] . "</td>";
+                            echo "<td>" . $row["Precio"] . "</td>";
+                            echo "<td class='imagen';>" . $row["Imagen1"] . "</td>";
+                            echo "<td class='imagen';>" . $row["Imagen2"] . "</td>";
+                            echo "<td class='imagen';>" . $row["Imagen3"] . "</td>";  
+                            echo "<td class='imagen';>" . $row["Imagen4"] . "</td>";
+                            echo "<td class='descuento';>" . $row["Descuento"] . "</td>";
+                            echo "</tr>";
+                        }
+                        }else {
+                        echo "<tr><td colspan='13'>No hay datos</td></tr>";
+                        }
+                    ?>
+                </table>
+            </div>
         </div>
         
         <div id="content2" style="display: none;">
@@ -227,48 +229,50 @@
                 <button type="submit" name="eliminar" class="btn btn-dark">Eliminar Producto</button>
             </form>
             <br>
-            <table>
-                <tr>
-                <th>Id</th>
-                <th>Marca</th>
-                <th>Nombre</th>
-                <th>Categoría</th> 
-                <th>Encabezado</th>
-                <th>Descripción</th>
-                <th>Existencia</th>
-                <th>Precio</th>
-                <th>Imagen1</th>
-                <th>Imagen2</th>  
-                <th>Imagen3</th>
-                <th>Imagen4</th>
-                <th>Descuento</th>
-                </tr>
-                <?php
-                    $sql = "SELECT Id, Marca, Nombre, Categoria, Encabezado, Descripcion, Existencia, Precio, Imagen1, Imagen2, Imagen3, Imagen4, Descuento FROM productos";
-                    $result = mysqli_query($conexion, $sql);
-                    if(mysqli_num_rows($result) > 0){
-                    while($row = mysqli_fetch_assoc($result)){
-                        echo "<tr>";
-                        echo "<td>" . $row["Id"] . "</td>";
-                        echo "<td>" . $row["Marca"] . "</td>";
-                        echo "<td>" . $row["Nombre"] . "</td>"; 
-                        echo "<td>" . $row["Categoria"] . "</td>";
-                        echo "<td>" . $row["Encabezado"] . "</td>";
-                        echo "<td class='description';>" . $row["Descripcion"] . "</td>";
-                        echo "<td>" . $row["Existencia"] . "</td>";
-                        echo "<td>" . $row["Precio"] . "</td>";
-                        echo "<td class='description';>" . $row["Imagen1"] . "</td>";
-                        echo "<td class='description';>" . $row["Imagen2"] . "</td>";
-                        echo "<td class='description';>" . $row["Imagen3"] . "</td>";  
-                        echo "<td class='description';>" . $row["Imagen4"] . "</td>";
-                        echo "<td>" . $row["Descuento"] . "</td>";
-                        echo "</tr>";
-                    }
-                    }else {
-                    echo "<tr><td colspan='13'>No hay datos</td></tr>";
-                    }
-                ?>
-            </table>
+            <div id="tabla">
+                <table>
+                    <tr>
+                    <th>Id</th>
+                    <th>Marca</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th> 
+                    <th>Encabezado</th>
+                    <th>Descripción</th>
+                    <th>Existencia</th>
+                    <th>Precio</th>
+                    <th>Imagen1</th>
+                    <th>Imagen2</th>  
+                    <th>Imagen3</th>
+                    <th>Imagen4</th>
+                    <th>Descuento</th>
+                    </tr>
+                    <?php
+                        $sql = "SELECT Id, Marca, Nombre, Categoria, Encabezado, Descripcion, Existencia, Precio, Imagen1, Imagen2, Imagen3, Imagen4, Descuento FROM productos";
+                        $result = mysqli_query($conexion, $sql);
+                        if(mysqli_num_rows($result) > 0){
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo "<tr>";
+                            echo "<td>" . $row["Id"] . "</td>";
+                            echo "<td>" . $row["Marca"] . "</td>";
+                            echo "<td>" . $row["Nombre"] . "</td>"; 
+                            echo "<td>" . $row["Categoria"] . "</td>";
+                            echo "<td>" . $row["Encabezado"] . "</td>";
+                            echo "<td class='description';>" . $row["Descripcion"] . "</td>";
+                            echo "<td>" . $row["Existencia"] . "</td>";
+                            echo "<td>" . $row["Precio"] . "</td>";
+                            echo "<td class='imagen';>" . $row["Imagen1"] . "</td>";
+                            echo "<td class='imagen';>" . $row["Imagen2"] . "</td>";
+                            echo "<td class='imagen';>" . $row["Imagen3"] . "</td>";  
+                            echo "<td class='imagen';>" . $row["Imagen4"] . "</td>";
+                            echo "<td class='descuento';>" . $row["Descuento"] . "</td>";
+                            echo "</tr>";
+                        }
+                        }else {
+                        echo "<tr><td colspan='13'>No hay datos</td></tr>";
+                        }
+                    ?>
+                </table>
+            </div>
         </div>
         
         <div id="content4" style="display: none;">

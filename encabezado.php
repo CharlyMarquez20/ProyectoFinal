@@ -55,32 +55,67 @@
                                 </button>
                             <?php
                                 }elseif(!empty($_SESSION['sesion_abierta'])){
-                            ?>
-                                <button id="usuario" data-bs-toggle="modal" data-bs-target="">
-                                    <img src="images/encabezado/carrito.png" alt="">
-                                    <span id="contadorCarrito">
-                                        <span class="numero"> 0 </span>
-                                    </span>
-                                </button>
-                                <?php
                                     if(!empty($_SESSION['admin'])){
                                         ?>
-                                        <div class="alert alert-light" role="alert" id="nombreUsuario">
-                                            <i style="font-weight: bold;">ADMINISTRADOR</i>
+                                        <div class="col-lg-12" id="elementosCarrito">
+                                            <div class="row">
+                                                <div class="col-md-2" id="contenedorUsuario">
+
+                                                    <button id="usuario" data-bs-toggle="modal" data-bs-target="">
+                                                        <img src="images/encabezado/carrito.png" alt="">
+                                                        <span id="contadorCarrito">
+                                                            <span class="numero"> 0 </span>
+                                                        </span>
+                                                    </button>
+
+                                                </div>
+
+                                                <div class="col-md-4" id="contenedorUsuario">
+                                                    <i style="font-weight: bold;">ADMINISTRADOR</i>
+                                                </div>
+
+                                                <div class="col-md-3" id="contenedorUsuario">
+                                                    <a href="admin.php" class="btn btn-outline-warning" id="cerrarSesion">Administrar</a>
+                                                </div>
+
+                                                <div class="col-md-3" id="contenedorUsuario">
+                                                    <form action="logout.php" method="post">
+                                                        <button type="submit" name="cerrarSesion" class="btn btn-outline-danger" id="cerrarSesion2">Cerrar Sesion</button> 
+                                                    </form>
+                                                </div> 
+
+                                            </div>
+                                            
                                         </div>
-                                        <a href="admin.php" class="btn btn-outline-warning" id="cerrarSesion">Administrar</a>
-                                        <form action="logout.php" method="post">
-                                            <button type="submit" name="cerrarSesion" class="btn btn-outline-danger" id="cerrarSesion2">Cerrar Sesion</button> 
-                                        </form>
+                                        
                                         <?php
                                     }else{
                                         ?>
-                                        <div class="alert alert-light" role="alert" id="nombreUsuario">
-                                            <i style="font-weight: bold;">Hola, <?php echo $_SESSION['cuenta']; ?></i>
+                                        <div class="col-lg-12" id="elementosCarrito">
+                                            <div class="row" style="height: 100%; width: 100%;">
+                                                <div class="col-lg-3" id="contenedorUsuario">
+
+                                                    <button id="usuario" data-bs-toggle="modal" data-bs-target="">
+                                                        <img src="images/encabezado/carrito.png" alt="">
+                                                        <span id="contadorCarrito">
+                                                            <span class="numero"> 0 </span>
+                                                        </span>
+                                                    </button>
+
+                                                </div>
+
+                                                <div class="col-lg-5" id="contenedorUsuario">
+                                                    <i style="font-weight: bold;">Hola, <?php echo $_SESSION['cuenta']; ?></i>
+                                                </div>
+
+                                                <div class="col-lg-4" id="contenedorUsuario">
+                                                    <form action="logout.php" method="post">
+                                                        <button type="submit" name="cerrarSesion" class="btn btn-outline-danger" id="cerrarSesion">Cerrar Sesion</button> 
+                                                    </form>
+                                                </div>
+
+                                            </div>
                                         </div>
-                                        <form action="logout.php" method="post">
-                                            <button type="submit" name="cerrarSesion" class="btn btn-outline-danger" id="cerrarSesion">Cerrar Sesion</button> 
-                                        </form>
                                         <?php
                                     }
                                 }
