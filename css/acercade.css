@@ -21,10 +21,11 @@ div#contenidoInfo1{
 }
 
 .section1 .img1{
-    background-color:#DCB7AE;
+    background-color:#e3bfb3;
     grid-column-start: 3;
     grid-column-end: 5;
     align-items: center;
+    justify-content: center;
 }
 
 .section2{

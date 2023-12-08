@@ -86,6 +86,7 @@ div#Logo{
 /* --------------------------------USUARIO/CARRITO-------------------------------- */
 div#Carrito{
     display: flex;
+    height: 100%;
     justify-content: flex-start;
     /* border: 1px solid purple; */
 }
@@ -131,32 +132,20 @@ div#Carrito form{
     flex-direction: column;
 }
 
-div#nombreUsuario{
-    position: relative;
-    left: 40px;
-    top: 10px;
-    background-color: #f2ede7;
+div#elementosCarrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#contenedorUsuario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button#cerrarSesion{
     height: 35px;
-    position: relative;
-    left: 40px;
-    top: 20px;
-}
-
-a#cerrarSesion{
-    height: 35px;
-    position: relative;
-    left: 40px;
-    top: 20px;
-}
-
-button#cerrarSesion2{
-    height: 35px;
-    position: relative;
-    left: 55px;
-    top: 20px;
 }
 
 span#contadorCarrito{
