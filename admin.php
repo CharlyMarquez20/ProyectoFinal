@@ -117,14 +117,14 @@
                             echo "<td>" . $row["Nombre"] . "</td>"; 
                             echo "<td>" . $row["Categoria"] . "</td>";
                             echo "<td>" . $row["Encabezado"] . "</td>";
-                            echo "<td class='description';>" . $row["Descripcion"] . "</td>";
+                            echo "<td class='description'>" . $row["Descripcion"] . "</td>";
                             echo "<td>" . $row["Existencia"] . "</td>";
                             echo "<td>" . $row["Precio"] . "</td>";
-                            echo "<td class='imagen';>" . $row["Imagen1"] . "</td>";
-                            echo "<td class='imagen';>" . $row["Imagen2"] . "</td>";
-                            echo "<td class='imagen';>" . $row["Imagen3"] . "</td>";  
-                            echo "<td class='imagen';>" . $row["Imagen4"] . "</td>";
-                            echo "<td class='descuento';>" . $row["Descuento"] . "</td>";
+                            echo "<td class='imagen'>" . $row["Imagen1"] . "</td>";
+                            echo "<td class='imagen'>" . $row["Imagen2"] . "</td>";
+                            echo "<td class='imagen'>" . $row["Imagen3"] . "</td>";  
+                            echo "<td class='imagen'>" . $row["Imagen4"] . "</td>";
+                            echo "<td>" . $row["Descuento"] . "</td>";
                             echo "</tr>";
                         }
                         }else {
@@ -237,13 +237,9 @@
                     <th>Nombre</th>
                     <th>Categoría</th> 
                     <th>Encabezado</th>
-                    <th>Descripción</th>
                     <th>Existencia</th>
                     <th>Precio</th>
-                    <th>Imagen1</th>
-                    <th>Imagen2</th>  
-                    <th>Imagen3</th>
-                    <th>Imagen4</th>
+                    <th>Imagen</th>
                     <th>Descuento</th>
                     </tr>
                     <?php
@@ -254,17 +250,13 @@
                             echo "<tr>";
                             echo "<td>" . $row["Id"] . "</td>";
                             echo "<td>" . $row["Marca"] . "</td>";
-                            echo "<td>" . $row["Nombre"] . "</td>"; 
+                            echo "<td class='limitar'>" . $row["Nombre"] . "</td>"; 
                             echo "<td>" . $row["Categoria"] . "</td>";
-                            echo "<td>" . $row["Encabezado"] . "</td>";
-                            echo "<td class='description';>" . $row["Descripcion"] . "</td>";
+                            echo "<td class='limitar'>" . $row["Encabezado"] . "</td>";
                             echo "<td>" . $row["Existencia"] . "</td>";
                             echo "<td>" . $row["Precio"] . "</td>";
-                            echo "<td class='imagen';>" . $row["Imagen1"] . "</td>";
-                            echo "<td class='imagen';>" . $row["Imagen2"] . "</td>";
-                            echo "<td class='imagen';>" . $row["Imagen3"] . "</td>";  
-                            echo "<td class='imagen';>" . $row["Imagen4"] . "</td>";
-                            echo "<td class='descuento';>" . $row["Descuento"] . "</td>";
+                            echo "<td class='imagen'><img src='images/productos/". $row["Imagen1"] ."' width='200' height='200'></td>";
+                            echo "<td>" . $row["Descuento"] . "</td>";
                             echo "</tr>";
                         }
                         }else {

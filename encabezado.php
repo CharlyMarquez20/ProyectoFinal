@@ -1,4 +1,14 @@
 <?php
+    $servidor='localhost:33065';
+    $cuenta='root';
+    $password='';
+    $bd='oasis';
+    $conexion = new mysqli($servidor,$cuenta,$password,$bd);
+
+    if ($conexion->connect_errno){
+        die('Error en la conexion');
+    }
+
     if(!empty($_SESSION['sesion_abierta'])){
         //echo "Encabezado: ".$_SESSION['sesion_abierta'];
     }else{
@@ -59,26 +69,16 @@
                                         ?>
                                         <div class="col-lg-12" id="elementosCarrito">
                                             <div class="row">
-                                                <div class="col-md-2" id="contenedorUsuario">
-
-                                                    <button id="usuario" data-bs-toggle="modal" data-bs-target="">
-                                                        <img src="images/encabezado/carrito.png" alt="">
-                                                        <span id="contadorCarrito">
-                                                            <span class="numero"> 0 </span>
-                                                        </span>
-                                                    </button>
-
-                                                </div>
 
                                                 <div class="col-md-4" id="contenedorUsuario">
                                                     <i style="font-weight: bold;">ADMINISTRADOR</i>
                                                 </div>
 
-                                                <div class="col-md-3" id="contenedorUsuario">
+                                                <div class="col-md-4" id="contenedorUsuario">
                                                     <a href="admin.php" class="btn btn-outline-warning" id="cerrarSesion">Administrar</a>
                                                 </div>
 
-                                                <div class="col-md-3" id="contenedorUsuario">
+                                                <div class="col-md-4" id="contenedorUsuario">
                                                     <form action="logout.php" method="post">
                                                         <button type="submit" name="cerrarSesion" class="btn btn-outline-danger" id="cerrarSesion2">Cerrar Sesion</button> 
                                                     </form>
@@ -94,11 +94,39 @@
                                         <div class="col-lg-12" id="elementosCarrito">
                                             <div class="row" style="height: 100%; width: 100%;">
                                                 <div class="col-lg-3" id="contenedorUsuario">
+                                                    
+                                                    <?php
+                                                        $carrito=array();
+                                                        $mensaje="";
+                                                        $sql = "SELECT IdProducto, Nombre, Precio, SUM(Cantidad) AS Cantidad FROM carrito WHERE Correo='$_SESSION[correo]' GROUP BY(IdProducto);";
+                                                        $resultado=$conexion->query($sql);
+                                                        if (mysqli_num_rows($resultado) > 0){
+                                                            while( $fila = mysqli_fetch_assoc($resultado)){
+                                                                $productoBase=array(
+                                                                    "Producto"=>"$fila[IdProducto]",
+                                                                    "Nombre"=>"$fila[Nombre]",
+                                                                    "Cantidad"=>"$fila[Cantidad]",
+                                                                    "Precio"=>"$fila[Precio]"
+                                                                );
+                                                                array_push($carrito, $productoBase);
+                                                            }
+                                                        }else{
+                                                            $mensaje="El carrito está vacío";
+                                                        }
+                                                    ?>
 
-                                                    <button id="usuario" data-bs-toggle="modal" data-bs-target="">
+                                                    <div id="productosCarrito">
+                                                        <div class="col-lg-12">
+                                                            <table id="ProductosTabla">
+                                                                <!-- AQUI SE IMPRIME EL CODIGO DE VER LOS PRODUCTOS DEL CARRITO -->
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                    <button id="usuario" onclick="mostrarOcultar()">
                                                         <img src="images/encabezado/carrito.png" alt="">
                                                         <span id="contadorCarrito">
-                                                            <span class="numero"> 0 </span>
+                                                            <span class="numero" id="contadorProductos"><?php echo $_SESSION['carrito']; ?></span>
                                                         </span>
                                                     </button>
 
@@ -187,23 +215,33 @@
         </div>
     </div>
 
+    <script src="js/productosCarrito.js"></script>
     <script>
         function showLogin() {
-        document.getElementById("login").classList.remove("hidden");
-        document.getElementById("register").classList.add("hidden");
-        document.getElementById("cambiarContra").classList.add("hidden");
+            document.getElementById("login").classList.remove("hidden");
+            document.getElementById("register").classList.add("hidden");
+            document.getElementById("cambiarContra").classList.add("hidden");
         }
 
         function showRegister() {
-        document.getElementById("register").classList.remove("hidden"); 
-        document.getElementById("login").classList.add("hidden");
-        document.getElementById("cambiarContra").classList.add("hidden");
+            document.getElementById("register").classList.remove("hidden"); 
+            document.getElementById("login").classList.add("hidden");
+            document.getElementById("cambiarContra").classList.add("hidden");
         }
 
         function showCambiar() {
-        document.getElementById("cambiarContra").classList.remove("hidden"); 
-        document.getElementById("login").classList.add("hidden");
-        document.getElementById("register").classList.add("hidden");
+            document.getElementById("cambiarContra").classList.remove("hidden"); 
+            document.getElementById("login").classList.add("hidden");
+            document.getElementById("register").classList.add("hidden");
+        }
+        function mostrarOcultar() {
+            actualizarProductos();
+            var x = document.getElementById("productosCarrito");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
         }
     </script>
     

@@ -1,6 +1,7 @@
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+    text-align: center;
     }
     /* Limitar ancho de celda de Descripción */
     td.description {
@@ -10,13 +11,16 @@ table, th, td {
     white-space: nowrap;
     }
 
+    td.limitar{
+      max-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
     td.imagen {
       max-width: 100px;
       overflow: hidden;
-    }
-
-    td.descuento {
-      text-align: center;
     }
     /* Estilos generales */
 main {

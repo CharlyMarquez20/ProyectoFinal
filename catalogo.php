@@ -103,7 +103,6 @@
     <link rel="stylesheet" href="css/general.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <title>Catalogo</title>
@@ -205,6 +204,15 @@
                             <input type="text" name="imagen4" value="<?php echo $producto["Imagen4"]; ?>" hidden>
                             <button type="submit" name="submit" class="buy-btn">Comprar</button>
                         </form>
+                        <?php
+                            if(!empty($_SESSION['sesion_abierta'])){
+                                ?>
+                                <button class="buy-btn" onclick="agregarCarrito('<?php echo $producto['Id']; ?>', 
+                                    '<?php echo $producto['Nombre']; ?>', '<?php echo $precioFinal; ?>')">Agregar al carrito</button>
+                                <?php
+                            }
+                        ?>
+                        
                     </div>
                     <?php
                 }
@@ -237,37 +245,12 @@
         }
     </script>
 
-    <!-- script para ajax en filtrar productos -->
-    <!-- <script>
-        function cargarProd() {
-            var min =document.getElementById("rango-min").value;
-            var max =document.getElementById("rango-max").value;
-            var mujer =document.getElementById("categoria-mujer").checked;
-            var hombre =document.getElementById("categoria-hombre").checked;
-            var nike =document.getElementById("marca-nike").checked;
-            var adidas =document.getElementById("marca-adidas").checked;
+    <script src="js/carrito.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-            const xhttp = new XMLHttpRequest();
-            const url = "filtrar_prod.php?"+"rango-min="+min+"&rango-max="+max+"&categoria-mujer="+mujer+"&categoria-hombre="+hombre+"&marca-nike="+nike+"&marca-adidas="+adidas;
-
-
-            xhttp.onload = function() {
-                // if(this.readyState==4 && this.status==200){
-                //     document.getElementById("productos-container").innerHTML=this.responseText;
-                // }
-                document.getElementById("productos-container").innerHTML=this.responseText;
-            }
-            xhttp.open("GET", url);
-            xhttp.send();
-        }
-        document.getElementById("filtrar-btn").addEventListener("click", function(){
-            cargarProd();
-        });
-    </script> -->
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
 </body>
 </html>
