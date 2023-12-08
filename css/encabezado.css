@@ -138,10 +138,42 @@ div#elementosCarrito{
     justify-content: center;
 }
 
+div#productosCarrito{
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    top: 120px;
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0 5px 10px gray;
+    text-align: center;
+}
+
+table#ProductosTabla{
+    width: 100%;
+}
+
+
 div#contenedorUsuario{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.buy-btn {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.buy-btn:hover {
+    background-color: black;
+    color: white;
 }
 
 button#cerrarSesion{

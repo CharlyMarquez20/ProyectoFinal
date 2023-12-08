@@ -86,8 +86,20 @@
                                 $_SESSION['cuenta']=$fila['Cuenta'];
                                 echo "<script>window.location.href = 'index.php';</script>";
                             }else{
-                                $_SESSION['sesion_abierta']=1;
+                                $sumaCarrito=0;
                                 $_SESSION['cuenta']=$fila['Cuenta'];
+                                $sql = "SELECT Correo, Cantidad, IdProducto FROM carrito WHERE Correo='$correo'";
+                                $resultado=$conexion->query($sql);
+                                if ($resultado -> num_rows){
+                                    while( $fila = $resultado -> fetch_assoc()){
+                                        $sumaCarrito+=$fila['Cantidad'];
+                                    }
+                                    $_SESSION['carrito']=$sumaCarrito;
+                                }else{
+                                    $_SESSION['carrito']=0;
+                                }
+                                $_SESSION['sesion_abierta']=1;
+                                $_SESSION['correo']=$correo;
                                 echo "<script>window.location.href = 'index.php';</script>"; 
                             }
                               
