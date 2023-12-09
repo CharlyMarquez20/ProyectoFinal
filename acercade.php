@@ -53,5 +53,10 @@
         </div>
     </div>
 
+    <footer>
+        <?php
+            include("piePagina.php");
+        ?>
+    </footer>
 </body>
 </html>

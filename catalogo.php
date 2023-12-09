@@ -202,14 +202,22 @@
                             <input type="text" name="imagen2" value="<?php echo $producto["Imagen2"]; ?>" hidden>
                             <input type="text" name="imagen3" value="<?php echo $producto["Imagen3"]; ?>" hidden>
                             <input type="text" name="imagen4" value="<?php echo $producto["Imagen4"]; ?>" hidden>
-                            <button type="submit" name="submit" class="buy-btn">Comprar</button>
+                            <button type="submit" name="submit" class="buy-btn">Detalles</button>
                         </form>
                         <?php
                             if(!empty($_SESSION['sesion_abierta'])){
-                                ?>
-                                <button class="buy-btn" onclick="agregarCarrito('<?php echo $producto['Id']; ?>', 
-                                    '<?php echo $producto['Nombre']; ?>', '<?php echo $precioFinal; ?>')">Agregar al carrito</button>
-                                <?php
+                                if($producto['Existencia']==0){
+                                    ?>
+                                    <button class="buy-btn" onclick="agregarCarrito('<?php echo $producto['Id']; ?>', 
+                                        '<?php echo $producto['Nombre']; ?>', '<?php echo $precioFinal; ?>')" disabled>Producto agotado</button>
+                                    <?php
+                                }else{
+                                    ?>
+                                    <button class="buy-btn" onclick="agregarCarrito('<?php echo $producto['Id']; ?>', 
+                                        '<?php echo $producto['Nombre']; ?>', '<?php echo $precioFinal; ?>')">Agregar al carrito</button>
+                                    <?php
+                                }
+                                
                             }
                         ?>
                         
@@ -225,6 +233,12 @@
             ?>
         </div>
     </section>
+
+    <footer>
+        <?php
+            include("piePagina.php");
+        ?>
+    </footer>
 
     <script>
         function validarFormulario() {

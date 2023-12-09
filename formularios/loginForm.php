@@ -87,7 +87,7 @@
                     <img src="captcha.jpg" alt="nada" style="width: 230px; height: 120px;">
                 </div>
                 <div class="col-md-6">
-                    <input type="text" name="captcha" id="captcha" placeholder="Ingresa el captcha" style="position: relative; top:30px;">
+                    <input type="text" name="captcha" id="captcha" placeholder="Ingresa el captcha" style="position: relative; top:30px;" required>
                 </div>
             </div>
             

@@ -192,5 +192,10 @@
     </div> 
     </section>
     
+    <footer>
+        <?php
+            include("piePagina.php");
+        ?>
+    </footer>
 </body>
 </html>

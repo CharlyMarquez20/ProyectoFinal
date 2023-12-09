@@ -31,7 +31,25 @@
 <body>
     <div class="padreEncabezado">
         <div id="slogan">
-            <p style="font-weight: bold;">Encuentra tu paraíso en cada paso: Oasis, donde los tenis son tu escape.</p>
+            <div class="col-lg-12" id="datosTienda">
+                <div class="col-md-4" style="color: #6f706c;">
+                    <h6>OASIS MX ©</h6>
+                </div>
+                <div class="col-md-4">
+                    <p style="font-weight: bold;">Encuentra tu paraíso en cada paso: Oasis, donde los tenis son tu escape.</p>
+                </div>
+                <div class="col-md-4" style="color: #6f706c;">
+                    <?php
+                        date_default_timezone_set("America/Mexico_City");
+                        $archivo="index.php";
+                        $fecha_actualizacion = filemtime($archivo);
+                        $fecha_actualizacion = date("d-m-Y H:i:s", $fecha_actualizacion);
+                        ?>
+                            <h6>Ultima actualización: <?php echo $fecha_actualizacion; ?></h6>
+                        <?php
+                    ?>
+                </div>
+            </div>
         </div>
 
         <div id="navbar">
@@ -215,6 +233,8 @@
         </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/carrito.js"></script>
     <script src="js/productosCarrito.js"></script>
     <script>
         function showLogin() {
