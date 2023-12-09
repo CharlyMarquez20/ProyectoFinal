@@ -1,0 +1,50 @@
+div.Padre_piePagina{
+    background-color: #f2ede7;
+    text-align: center;
+    color: #6f706c;
+    height: 400px;
+    /* border: 1px solid black; */
+}
+
+div#contenidoPie{
+    display: flex;
+    flex-direction: row;
+}
+
+
+div#leyenda{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.input-correo {
+    background-color: #f2ede7;
+    color: black;
+    border: 1px solid black;
+    border-right: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    width: 400px;
+}
+
+.input-correo:focus{
+    outline: none;
+}
+
+span#boton{
+    margin-left: -20px;
+}
+
+button#enviarCorreo{
+    border: 1px solid black;
+    border-left: none;
+    color: black;
+    background-color: #f2ede7;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+

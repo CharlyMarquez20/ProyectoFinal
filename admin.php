@@ -144,19 +144,19 @@
                     <div class="row">
                         <div class="col-md-3">
                             <label id="Encabezados">Marca</label>
-                            <input type="text" name="marca">
+                            <input type="text" name="marca" required>
                         </div>
                         <div class="col-md-3">
                             <label id="Encabezados">Nombre</label>
-                            <input type="text" name="nombre">
+                            <input type="text" name="nombre" required>
                         </div>
                         <div class="col-md-3">
                             <label id="Encabezados">Encabezado</label>
-                            <input type="text" name="encabezado"></input>
+                            <input type="text" name="encabezado" required></input>
                         </div>
                         <div class="col-md-3">
                             <label id="Encabezados">Descripcion</label>
-                            <input type="textarea" name="descripcion"></input>
+                            <input type="textarea" name="descripcion" required></input>
                         </div>
                         
                     </div>
@@ -169,21 +169,21 @@
                         <div class="col-md-3">
                             <label id="Encabezados">Categoria</label>
                             <div style="text-align: center;">
-                               <label class="categoria"><input type="radio" id="hombre" name="categoria" value="Hombre">Hombre</label>
+                                <label class="categoria"><input type="radio" id="hombre" name="categoria" value="Hombre">Hombre</label>
                                 <label class="categoria"><input type="radio" id="mujer" name="categoria" value="Mujer">Mujer</label> 
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label id="Encabezados">Existencia</label>
-                            <input type="number" name="existencia">
+                            <input type="number" name="existencia" required>
                         </div>
                         <div class="col-md-3">
                             <label id="Encabezados">Precio</label>
-                            <input type="number" name="precio">
+                            <input type="number" name="precio" required>
                         </div>
                         <div class="col-md-3">
                             <label id="Encabezados">Descuento</label>
-                            <input type="number" name="descuento">
+                            <input type="number" name="descuento" required>
                         </div>
                     </div>
                 </div>
@@ -194,19 +194,19 @@
                     <div class="row">
                         <div class="col-md-3">
                             <label id="Encabezados">Imagen 1</label>
-                            <input type="file" name="imagen1" id="imagen1" accept="image/*">
+                            <input type="file" name="imagen1" id="imagen1" accept="image/*" required>
                         </div>
                         <div class="col-md-3">
                             <label id="Encabezados">Imagen 2</label>
-                            <input type="file" name="imagen2" id="imagen2" accept="image/*">
+                            <input type="file" name="imagen2" id="imagen2" accept="image/*" required>
                         </div>
                         <div class="col-md-3">
                             <label id="Encabezados">Imagen 3</label>
-                            <input type="file" name="imagen3" id="imagen3" accept="image/*">
+                            <input type="file" name="imagen3" id="imagen3" accept="image/*" required>
                         </div>
                         <div class="col-md-3">
                             <label id="Encabezados">Imagen 4</label>
-                            <input type="file" name="imagen4" id="imagen4" accept="image/*">
+                            <input type="file" name="imagen4" id="imagen4" accept="image/*" required>
                         </div>
                     </div>
                 </div>
@@ -224,7 +224,7 @@
             <h2>Bajas</h2>
             <form action="bajas.php" method="post">
                 <label for="id_producto">ID del producto a eliminar:</label>
-                <input type="number" name="id_producto" min="1">
+                <input type="number" name="id_producto" min="1" required>
                 <br>
                 <button type="submit" name="eliminar" class="btn btn-dark">Eliminar Producto</button>
             </form>
@@ -351,19 +351,19 @@
                                 <div class="row">
                                     <div class="col-md-3">
                                         <label id="Encabezados">Imagen 1</label>
-                                        <input type="file" name="imagen1" id="imagen1" accept="image/*">
+                                        <input type="file" name="imagen1" id="imagen1" accept="image/*" required>
                                     </div>
                                     <div class="col-md-3">
                                         <label id="Encabezados">Imagen 2</label>
-                                        <input type="file" name="imagen2" id="imagen2" accept="image/*">
+                                        <input type="file" name="imagen2" id="imagen2" accept="image/*" required>
                                     </div>
                                     <div class="col-md-3">
                                         <label id="Encabezados">Imagen 3</label>
-                                        <input type="file" name="imagen3" id="imagen3" accept="image/*">
+                                        <input type="file" name="imagen3" id="imagen3" accept="image/*" required>
                                     </div>
                                     <div class="col-md-3">
                                         <label id="Encabezados">Imagen 4</label>
-                                        <input type="file" name="imagen4" id="imagen4" accept="image/*">
+                                        <input type="file" name="imagen4" id="imagen4" accept="image/*" required>
                                     </div>
                                 </div>
                             </div>

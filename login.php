@@ -188,7 +188,8 @@
             }else{
                 $sql = "INSERT INTO usuarios (Nombre, Cuenta, Correo, Pregunta, Contrasena) VALUES('$nombre', '$cuenta', '$correo', '$pregunta', '$encriptado');";
                 $conexion->query($sql);
-
+                $_SESSION['carrito']=0;
+                $_SESSION['correo']=$correo;
                 $sql = "SELECT Cuenta FROM usuarios WHERE Nombre='$nombre'";
                 $resultado = $conexion->query($sql);
                 if ($conexion->affected_rows >= 1){ //revisamos que se inserto un registro

@@ -11,6 +11,13 @@ div#slogan{
     height: 40px;
 }
 
+div#datosTienda{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 div#navbar{
     /* border: 1px solid blue; */
     background-color: #f2ede7;

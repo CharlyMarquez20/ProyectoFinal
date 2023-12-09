@@ -79,65 +79,80 @@
             ?>
             <h4>Descripción</h4>
             <p><?php echo $descripcion ?></p>
-            <form action="#" method="post">
-                <label for="talla">Talla</label>
-                <div class="talla-container">
-                    <label class="talla-option" for="talla_23">
-                        <input type="radio" id="talla_23" name="talla" value="23" onclick="seleccionarTalla(this)">
-                        23 cm
-                    </label>
-                    <label class="talla-option" for="talla_24">
-                        <input type="radio" id="talla_24" name="talla" value="24" onclick="seleccionarTalla(this)">
-                        24 cm
-                    </label>
-                    <label class="talla-option" for="talla_25">
-                        <input type="radio" id="talla_25" name="talla" value="25" onclick="seleccionarTalla(this)">
-                        25 cm
-                    </label>
-                    <label class="talla-option" for="talla_26">
-                        <input type="radio" id="talla_26" name="talla" value="26" onclick="seleccionarTalla(this)">
-                        26 cm
-                    </label>
-                    <label class="talla-option" for="talla_27">
-                        <input type="radio" id="talla_27" name="talla" value="27" onclick="seleccionarTalla(this)">
-                        27 cm
-                    </label>
-                    <input type="hidden" id="tallaSeleccionada" name="tallaSeleccionada" value="">                    
-                </div>
-                <h6>Estilo</h6>
-                <h6 id="estilo">Casual</h6>
+            <label for="talla">Talla</label>
+            <div class="talla-container">
+                <label class="talla-option" for="talla_23">
+                    <input type="radio" id="talla_23" name="talla" value="23" onclick="seleccionarTalla(this)">
+                    23 cm
+                </label>
+                <label class="talla-option" for="talla_24">
+                    <input type="radio" id="talla_24" name="talla" value="24" onclick="seleccionarTalla(this)">
+                    24 cm
+                </label>
+                <label class="talla-option" for="talla_25">
+                    <input type="radio" id="talla_25" name="talla" value="25" onclick="seleccionarTalla(this)">
+                    25 cm
+                </label>
+                <label class="talla-option" for="talla_26">
+                    <input type="radio" id="talla_26" name="talla" value="26" onclick="seleccionarTalla(this)">
+                    26 cm
+                </label>
+                <label class="talla-option" for="talla_27">
+                    <input type="radio" id="talla_27" name="talla" value="27" onclick="seleccionarTalla(this)">
+                    27 cm
+                </label>
+                <input type="hidden" id="tallaSeleccionada" name="tallaSeleccionada" value="">                    
+            </div>
+            <h6>Estilo</h6>
+            <h6 id="estilo">Casual</h6>
 
-                <h6>Existencia:</h6>
-                <h6 class="talla-option">
-                    <?php
-                        if($existencia==0){
-                           echo "Producto agotado";
-                        }else{
-                           echo $existencia;
-                        }
-                     ?>
-                </h6>
-
-                <h6>Cantidad</h6>
+            <h6>Existencia:</h6>
+            <h6 class="talla-option">
                 <?php
                     if($existencia==0){
+                        echo "Producto agotado";
+                    }else{
+                        echo $existencia;
+                    }
+                    ?>
+            </h6>
+
+            <?php
+                if($existencia==0){
+                    if(empty($_SESSION['sesion_abierta'])){
                         ?>
-                        <input type="number" value="0" id="cantidad" min="0" max="<?php echo $existencia ?>" disabled>
-                        <button type="submit" id="carrito-btn" disabled>Añadir al carrito</button>
+                        <hr>
+                        <i><h5>Inicia sesión o registrate para poder adquirir nuestros productos</h5></i>
                         <?php
                     }else{
                         ?>
-                        <input type="number" value="1" id="cantidad" min="1" max="<?php echo $existencia ?>">
-                        <button type="submit" id="carrito-btn" disabled>Añadir al carrito</button>
+                        <h6>Cantidad</h6>
+                        <input type="number" value="0" id="cantidad" min="0" max="<?php echo $existencia ?>" disabled>
+                        <button id="carrito-btn" disabled>Producto agotado</button>
                         <?php
                     }
-                ?>
-            </form>
+                }else{
+                    if(empty($_SESSION['sesion_abierta'])){
+                        ?>
+                        <hr>
+                        <i><h5>Inicia sesión o registrate para poder adquirir nuestros productos</h5></i>
+                        <?php
+                    }else{
+                        ?>
+                        <h6>Cantidad</h6>
+                        <input type="number" value="1" id="cantidad" min="1" max="<?php echo $existencia ?>">
+                        <button id="carrito-btn" onclick="agregarCarrito2('<?php echo $id ?>', 
+                                    '<?php echo $nombre ?>', '<?php echo $precioFinal; ?>')">Añadir al carrito</button>
+                        <?php
+                    }
+                }
+            ?>
         </div>
 
     </section>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/carrito.js"></script>
     <script>
         function seleccionarTalla(radio) {
             var tallaSeleccionada = document.getElementById('tallaSeleccionada');
