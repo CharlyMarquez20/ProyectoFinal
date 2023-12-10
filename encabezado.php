@@ -32,13 +32,13 @@
     <div class="padreEncabezado">
         <div id="slogan">
             <div class="col-lg-12" id="datosTienda">
-                <div class="col-md-4" style="color: #6f706c;">
+                <div class="col-sm-4" style="color: #6f706c;">
                     <h6>OASIS MX ©</h6>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4">
                     <p style="font-weight: bold;">Encuentra tu paraíso en cada paso: Oasis, donde los tenis son tu escape.</p>
                 </div>
-                <div class="col-md-4" style="color: #6f706c;">
+                <div class="col-sm-4" style="color: #6f706c;">
                     <?php
                         date_default_timezone_set("America/Mexico_City");
                         $archivo="index.php";
