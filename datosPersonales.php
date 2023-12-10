@@ -15,18 +15,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/personales.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/personales.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/x-icon" href="images/Logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/Logo.png">
     <title>Haz tu pedido</title>
 </head>
 <body class="fondo">
     <header>
         <div class="header">
             <div id="logoTienda">
-                <img class="logo" src="../images/Logo2.png" alt="">
+                <img class="logo" src="images/logo/Logo2.png" alt="">
             </div>
         </div>
     </header>

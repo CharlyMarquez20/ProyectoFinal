@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="images/Logo.png">
-    <link rel="stylesheet" href="../css/oxxo.css">
-    <link rel="stylesheet" href="c../ss/general.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/Logo.png">
+    <link rel="stylesheet" href="css/oxxo.css">
+    <link rel="stylesheet" href="css/general.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -16,7 +16,7 @@
     <header>
         <div class="header">
             <div id="logoTienda">
-                <img class="logo" src="../images/Logo2.png" alt="">
+                <img class="logo" src="images/logo/Logo2.png" alt="">
             </div>
         </div>
     </header>
@@ -31,12 +31,12 @@
                             <tr>
                                 <td rowspan="2">
                                     <div class="oxxo-logo">
-                                        <img src="../images/pagos/oxxo.png" alt="" class="logo" id="oxxo">
+                                        <img src="images/pagos/oxxo.png" alt="" class="logo" id="oxxo">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="codigo-barras">
-                                        <img src="../images/pagos/barras.png" alt="" class="logo" id="codigo">
+                                        <img src="images/pagos/barras.png" alt="" class="logo" id="codigo">
                                     </div>
                                 </td>
                             </tr>
@@ -99,7 +99,7 @@
                 <div id="pie">
                     <div class="numeros">
                         <div id="imagenDuda">
-                            <img src="../images/pagos/dudas.png" alt="" id="dudas">
+                            <img src="images/pagos/dudas.png" alt="" id="dudas">
                         </div>
                         <div id="leyendaDuda">
                             <div style="width: 100%;">
