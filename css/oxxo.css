@@ -8,7 +8,7 @@ div.header{
     box-shadow: 0 0 10px gray; 
 }
 
-table, table td, table tr{
+table#oxxo, table#oxxo td, table#oxxo tr{
     border: 1px solid rgb(0, 0, 0);
 }
 

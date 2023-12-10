@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-md-6">
                         <h5><i>Nuestras redes sociales</i></h5>
-                        <a href="https://instagram.com" target="_blank"><img src="images/piePagina/instagram.png" alt=""></a>
+                        <a href="https://www.instagram.com/oasis_snkrs_mx/" target="_blank"><img src="images/piePagina/instagram.png" alt=""></a>
                     </div>
                 </div>
                 <br>

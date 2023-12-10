@@ -38,7 +38,7 @@
 
     <div class="section2">
         <h2>Destacados</h2>
-        <img class="grow" id="img1" src="https://images.unsplash.com/photo-1626379616459-b2ce1d9decbc?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="400">
+        <img class="grow" id="img1" src="images/cupones/cuponSitio.png" alt="" width="340">
         <a href="catalogo.php">
             <img class="img2" src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="200">
         </a>

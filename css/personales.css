@@ -8,6 +8,11 @@ div.header{
     box-shadow: 0 0 10px gray; 
 }
 
+table#productos{
+    width: 100%;
+    text-align: center;
+}
+
 div#logoTienda{
     width: 12%;
 }
@@ -80,6 +85,23 @@ input[type="button"]{
 }
 
 input[type="button"]:hover{
+    background-color: #E5B97A;
+}
+
+input[type="submit"]{
+    background-color: #ECCD9F;
+    color: rgb(103, 95, 95);
+    font-weight: 500;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    padding: 0 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
     background-color: #E5B97A;
 }
 
