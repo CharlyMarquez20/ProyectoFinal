@@ -69,6 +69,8 @@
                         </tr>
                         <?php
                     }
+                    $_SESSION['precio']=$total;
+                    $_SESSION['descuento']=0;
                     ?>
                     <tr>
                         <td colspan="2">
@@ -81,7 +83,9 @@
                     <tr>
                         <td colspan="3">
                             <br>
-                            <button class="buy-btn">Proceder al pago</button>
+                            <form action="datosPersonales.php" method="post">
+                                <button class="buy-btn">Proceder al pago</button>
+                            </form>
                         </td>
                     </tr>
                 <?php

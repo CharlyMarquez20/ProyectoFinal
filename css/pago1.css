@@ -12,6 +12,11 @@ div.header{
     box-shadow: 0 0 10px gray; 
 }
 
+table#productos{
+    width: 100%;
+    text-align: center;
+}
+
 div#logoTienda{
     width: 12%;
 }
