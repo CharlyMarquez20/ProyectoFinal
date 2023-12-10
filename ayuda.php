@@ -17,7 +17,7 @@
     </header>
 
     <section style="padding: 20px;">
-    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
 
     <div class="col">
             <div class="card h-100" style="box-shadow: 0 5px 10px rgba(128, 128, 128, 0.288);">

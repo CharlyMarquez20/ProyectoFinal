@@ -108,11 +108,9 @@
     <title>Catalogo</title>
 </head>
 <body class="fondo">
-    <header>
-       <?php
-        require "encabezado.php";
-        ?> 
-    </header>
+    <?php
+    require "encabezado.php";
+    ?>
     
     <!-- aside -->
     <div class="filtro-container">
