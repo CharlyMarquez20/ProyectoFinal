@@ -1,0 +1,144 @@
+body{
+    transition: 0.5s;
+}
+
+div.header{
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid #f2f2f2;
+    background-color: white;
+    padding: 0 5%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px gray; 
+}
+
+div#logoTienda{
+    width: 12%;
+}
+
+img.logo{
+    width: 100%;
+}
+
+div.banco{
+    text-align: center;
+}
+
+img.logoBanco{
+    width: 30%;
+}
+
+div.contenidoInterno{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    margin: 40px 0 20px 140px;
+    background-color: #ffffff; 
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container{
+    width: 100%; 
+    padding: 20px;
+    background-color: #ffffff; 
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title{
+    font-size: 30px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+form.checkout-form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-line{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+label{
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"]{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+}
+
+input[type="text"]::placeholder{
+    font-size: 14px;
+    color: #b9b9b9;
+}
+
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input-container .expiration{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.expiration #month, #year{
+    width: 85%;
+}
+
+input[type="button"]{
+    background-color: #ECCD9F;
+    color: rgb(103, 95, 95);
+    font-weight: 500;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover{
+    background-color: #E5B97A;
+}
+
+.carrito-productos {
+    width: 35%; 
+    padding: 20px;
+    margin: 40px 140px 20px 0;
+    background-color: #edebeb; 
+    border: 1px solid rgb(224, 222, 222);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h4{
+    font-size: 36px;
+    font-weight: 500;
+    opacity: 0.8;
+}

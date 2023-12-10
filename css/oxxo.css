@@ -1,0 +1,113 @@
+div.header{
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid #f2f2f2;
+    background-color: white;
+    padding: 0 5%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px gray; 
+}
+
+table, table td, table tr{
+    border: 1px solid rgb(0, 0, 0);
+}
+
+div#pagoOxxo{
+    width: 100%;
+}
+
+.section-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.contenidoInterno{
+    display: flex;
+    flex-direction: row;
+    width: 40%; 
+    padding: 20px;
+    margin: 40px 0 20px 140px;
+    background-color: #ffffff; 
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+div.carrito-productos {
+    width: 35%; 
+    padding: 20px;
+    margin: 40px 140px 20px 0;
+    background-color: #edebeb; 
+    border: 1px solid rgb(224, 222, 222);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+div.ticket-container{
+    width: 100%;
+}
+
+div#logoTienda{
+    width: 12%;
+}
+
+div.padre{
+    text-align: center;
+    width: 100%;
+}
+
+div.numeros{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div#imagenDuda{
+    text-align: left;
+}
+
+div#leyendaDuda{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #eff3f4;
+}
+
+div#leyendaAdvertencia{
+    background-color: rgba(0, 0, 0, 0.644);
+    color: white;
+    height: 40px;
+}
+
+div.numeros #interior{
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+img.logo{
+    width: 100%;
+}
+
+img#oxxo, img#codigo{
+    width: 40%;
+}
+
+img#dudas{
+    width: 100px;
+}
+
+input[type="button"]{
+    background-color: #ECCD9F;
+    color: rgb(103, 95, 95);
+    font-weight: 500;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    padding: 0 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="button"]:hover{
+    background-color: #E5B97A;
+}
