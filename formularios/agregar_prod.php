@@ -1,3 +1,19 @@
+<?php
+    $servidor='localhost:33065';
+    $cuenta='root';
+    $password='';
+    $bd='oasis';    
+
+    $conexion = new mysqli($servidor,$cuenta,$password,$bd);
+
+    if ($conexion->connect_errno) {
+        die('Error en la conexión: ' . $conexion->connect_error);
+    }
+
+    $sql = "SELECT nombre, marca, categoria, precio FROM productos";
+$resultado = $conexion->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
