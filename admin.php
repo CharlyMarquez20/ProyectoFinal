@@ -86,7 +86,9 @@
             <button id="btn3">Bajas</button>
             <button id="btn4">Cambios</button>
         </div>
-        
+        <?php
+            include("grafica.php");
+        ?>
         <div id="content1" style="display: block;" >
             <br>
             <div id="tabla">

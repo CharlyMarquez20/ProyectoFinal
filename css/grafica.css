@@ -1,0 +1,62 @@
+.grafica {
+    background: rgb(252, 252, 252);
+    font-family: 'Poppins', monospace;
+    color: black;
+    font-size: .7em;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.grafica section {
+    margin-bottom: 40px;
+    border: 1px solid black;
+}
+.grafica h1 {
+    font-size: 3em;
+    font-weight: 100;
+}
+.grafica h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-weight: 200;
+}
+.grafica hr {
+    border-color: black;
+    margin: 10px 0;
+}figure, .grafica canvas {
+    color:black;
+    background-color: rgb(241, 237, 237);
+    padding: 10px 10px 30px;
+    
+}
+.grafica canvas {
+    width: 100%;
+}
+/* grid */
+[class*='cols'] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.cols-1 > * {
+    width: 100%;
+    margin: 10px;
+}
+.cols-2 > * {
+    width: 50%;
+    margin: 10px
+}
+@media  (max-width: 800px) {
+    .grafica h1 {
+        font-size: 2.1em;
+        font-weight: 100;
+    }
+    .grafica [class*='cols'] {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .grafica .cols-2 > * {
+        width: 100%;
+    }
+}
