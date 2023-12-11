@@ -103,7 +103,7 @@
                             </div>
                             <br>
                             <h3 class="form-title">Pago con tarjeta de crédito</h3>
-                            <form action="" class="checkout-form">
+                            <form action="notaNavegador.php" class="checkout-form" method="post">
                                 <div class="input-line">
                                     <label for="name">Nombre en la tarjeta</label>
                                     <input type="text" name="name" id="name" placeholder="Nombre completo">
@@ -120,7 +120,7 @@
                                                 <input type="text" name="month" id="month" placeholder="MM" maxlength="2">
                                             </div>
                                             <div>
-                                                <input type="text" name="year" id="year" placeholder="AA" maxlength="2">
+                                                <input type="text" name="year" id="year" placeholder="AAAA" maxlength="4">
                                             </div>
                                         </span>
                                     </div>
@@ -129,7 +129,32 @@
                                         <input type="text" name="name" id="cvv" placeholder="***" maxlength="3" size="3">
                                     </div>
                                 </div>
-                                <input type="button" value="Confirmar pago y pedido">
+
+                                <!-- ----------------INPUTS INVISIBLES------------------ -->
+                                <?php
+                                    date_default_timezone_set("America/Mexico_City");
+                                    $fecha_actualizacion = date("d-m-Y H:i:s");
+                                ?>
+                                <input type="text" name="fecha" value="<?php echo $fecha_actualizacion; ?>" hidden>
+                                <input type="text" name="nombre" value="<?php echo $nombreCompleto; ?>" hidden>
+
+                                <input type="text" name="direccion" value="<?php echo $direccion; ?>" hidden>
+                                <input type="text" name="cp" value="<?php echo $cp; ?>" hidden>
+                                <input type="text" name="ciudad" value="<?php echo $ciudad; ?>" hidden>
+                                <input type="text" name="estado" value="<?php echo $estado; ?>" hidden>
+                                
+                                <input type="text" name="telefono" value="<?php echo $telefono; ?>" hidden>
+                                <input type="email" name="correo" value="<?php echo $correo; ?>" hidden>
+
+                                <input type="number" name="subtotal" value="<?php echo $precio; ?>" hidden>
+                                <input type="number" name="envio" value="<?php echo $envio; ?>" hidden>
+                                <input type="number" name="impuesto" value="<?php echo $impuesto; ?>" hidden>
+                                <input type="number" name="total" value="<?php echo $precioFinal; ?>" hidden>
+                                <input type="text" name="tipo" value="<?php echo $tipo; ?>" hidden>
+                                <!-- ----------------INPUTS INVISIBLES------------------ -->
+
+
+                                <input type="submit" value="Confirmar pago y pedido">
                             </form>
                         </div>
                     </div>
@@ -446,7 +471,31 @@
                                 </table>
                             </div>
                             <div>
-                                <input type="button" value="Finalizar compra">
+                                <form action="notaNavegador.php" method="post">
+                                    <!-- ----------------INPUTS INVISIBLES------------------ -->
+                                    <?php
+                                        date_default_timezone_set("America/Mexico_City");
+                                        $fecha_actualizacion = date("d-m-Y H:i:s");
+                                    ?>
+                                    <input type="text" name="fecha" value="<?php echo $fecha_actualizacion; ?>" hidden>
+                                    <input type="text" name="nombre" value="<?php echo $nombreCompleto; ?>" hidden>
+
+                                    <input type="text" name="direccion" value="<?php echo $direccion; ?>" hidden>
+                                    <input type="text" name="cp" value="<?php echo $cp; ?>" hidden>
+                                    <input type="text" name="ciudad" value="<?php echo $ciudad; ?>" hidden>
+                                    <input type="text" name="estado" value="<?php echo $estado; ?>" hidden>
+
+                                    <input type="text" name="telefono" value="<?php echo $telefono; ?>" hidden>
+                                    <input type="email" name="correo" value="<?php echo $correo; ?>" hidden>
+
+                                    <input type="number" name="subtotal" value="<?php echo $precio; ?>" hidden>
+                                    <input type="number" name="envio" value="<?php echo $envio; ?>" hidden>
+                                    <input type="number" name="impuesto" value="<?php echo $impuesto; ?>" hidden>
+                                    <input type="number" name="total" value="<?php echo $precioFinal; ?>" hidden>
+                                    <input type="text" name="tipo" value="<?php echo $tipo; ?>" hidden>
+                                    <!-- ----------------INPUTS INVISIBLES------------------ -->
+                                    <input type="submit" value="Finalizar compra">  
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -465,7 +514,7 @@
                             </div>
                             <br>
                             <h3 class="form-title">Pago con tarjeta de crédito</h3>
-                            <form action="" class="checkout-form">
+                            <form action="notaNavegador.php" class="checkout-form" method="post">
                                 <div class="input-line">
                                     <label for="name">Nombre en la tarjeta</label>
                                     <input type="text" name="name" id="name" placeholder="Nombre completo">
@@ -482,7 +531,7 @@
                                                 <input type="text" name="month" id="month" placeholder="MM" maxlength="2">
                                             </div>
                                             <div>
-                                                <input type="text" name="year" id="year" placeholder="AA" maxlength="2">
+                                                <input type="text" name="year" id="year" placeholder="AAAA" maxlength="4">
                                             </div>
                                         </span>
                                     </div>
@@ -491,7 +540,29 @@
                                         <input type="text" name="name" id="cvv" placeholder="***" maxlength="3" size="3">
                                     </div>
                                 </div>
-                                <input type="button" value="Confirmar pago y pedido">
+                                <!-- ----------------INPUTS INVISIBLES------------------ -->
+                                <?php
+                                    date_default_timezone_set("America/Mexico_City");
+                                    $fecha_actualizacion = date("d-m-Y H:i:s");
+                                ?>
+                                <input type="text" name="fecha" value="<?php echo $fecha_actualizacion; ?>" hidden>
+                                <input type="text" name="nombre" value="<?php echo $nombreCompleto; ?>" hidden>
+                            
+                                <input type="text" name="direccion" value="<?php echo $direccion; ?>" hidden>
+                                <input type="text" name="cp" value="<?php echo $cp; ?>" hidden>
+                                <input type="text" name="ciudad" value="<?php echo $ciudad; ?>" hidden>
+                                <input type="text" name="estado" value="<?php echo $estado; ?>" hidden>
+                                
+                                <input type="text" name="telefono" value="<?php echo $telefono; ?>" hidden>
+                                <input type="email" name="correo" value="<?php echo $correo; ?>" hidden>
+
+                                <input type="number" name="subtotal" value="<?php echo $precio; ?>" hidden>
+                                <input type="number" name="envio" value="<?php echo $envio; ?>" hidden>
+                                <input type="number" name="impuesto" value="<?php echo $impuesto; ?>" hidden>
+                                <input type="number" name="total" value="<?php echo $precioFinal; ?>" hidden>
+                                <input type="text" name="tipo" value="<?php echo $tipo; ?>" hidden>
+                                <!-- ----------------INPUTS INVISIBLES------------------ -->
+                                <input type="submit" value="Confirmar pago y pedido">
                             </form>
                         </div>
                     </div>

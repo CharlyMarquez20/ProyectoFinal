@@ -132,6 +132,22 @@ input[type="button"]:hover{
     background-color: #E5B97A;
 }
 
+input[type="submit"]{
+    background-color: #ECCD9F;
+    color: rgb(103, 95, 95);
+    font-weight: 500;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: #E5B97A;
+}
+
 .carrito-productos {
     width: 35%; 
     padding: 20px;
