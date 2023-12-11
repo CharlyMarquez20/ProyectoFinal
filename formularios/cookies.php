@@ -9,10 +9,7 @@
          die('Error en la conexion');
     }
 
-    $correo=$_POST['correo'];
-    $contra=$_POST['contra'];
-
-    $sql="SELECT Correo, Contrasena FROM usuarios WHERE Correo='$correo' AND Contrasena='$contra'";
+    $sql="SELECT Correo, Contrasena FROM usuarios WHERE Correo='$correo' AND Contrasena='$encriptado'";
     $resultado=$conexion->query($sql);
     if ($conexion->affected_rows >= 1){
         if(!empty($_POST["remember"])){
