@@ -15,7 +15,7 @@
             <div id="suscripcion">
                 <div class="col-lg-12" id="contenidoPie">
                     <div class="col-md-6">
-                        <form action="">
+                        <form action="cuponSuscripcion.php" method="post">
                             <label for=""><i>Suscribete para recibir un código de descuento exclusivo</i></label>
                             <br>
                             <input type="email" name="correo" class="input-correo" placeholder="Correo electrónico">
