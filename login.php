@@ -14,7 +14,6 @@
             //require("index.php");
         ?>
     </header>
-
     <template id="recuperarContra">
         <swal-html>
             <h6>Para poder recuperar tu contraseña, deberás de introducir la respuesta a
@@ -40,6 +39,7 @@
 </body>
 </html>
 <?php
+    //ceci permet de se log;
     $servidor='localhost:33065';
     $cuenta='root';
     $password='';

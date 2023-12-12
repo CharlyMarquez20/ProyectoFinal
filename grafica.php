@@ -1,5 +1,6 @@
 <?php
     include("baseGraficas.php");
+    //ceci permet de faire les graphiques dynamiques
 ?>
 <!DOCTYPE html>
 <html lang="es">

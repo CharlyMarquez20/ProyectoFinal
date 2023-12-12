@@ -1,4 +1,5 @@
 <?php
+//desconnect la persona
     if(isset($_POST['cerrarSesion'])){
         session_start();
         $_SESSION['sesion_abierta'] = null;

@@ -1,4 +1,5 @@
 <?php
+//l'entete de la page 
     $servidor='localhost:33065';
     $cuenta='root';
     $password='';
